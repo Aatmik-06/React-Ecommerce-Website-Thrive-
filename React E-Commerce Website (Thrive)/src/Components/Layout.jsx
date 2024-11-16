@@ -13,7 +13,7 @@ import { faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
 const Layout=()=>{
     return(
         <>
-         <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" id='navbar'>
+         <Navbar collapseOnSelect expand="lg"  id='navbar'  sticky="top" >
       <Container>
           <Navbar.Brand as={Link} to="/Home" id='logo' >
             <img
