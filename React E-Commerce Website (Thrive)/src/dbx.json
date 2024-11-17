@@ -1,0 +1,12 @@
+{
+    "shop":[
+        {
+            "id":1,
+            "name":"t shirt",
+            "price":2300,
+            "description":"this is very good t shirt for men",
+            "category":"men",
+            "image":"https://m.media-amazon.com/images/I/713n+TxyfCL._SY879_.jpg"
+        }
+    ]
+}

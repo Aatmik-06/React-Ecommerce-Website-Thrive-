@@ -13,7 +13,7 @@ import { faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
 const Layout=()=>{
     return(
         <>
-         <Navbar collapseOnSelect expand="lg"  id='navbar'  sticky="top" >
+         <Navbar collapseOnSelect expand="lg" id='navbar' sticky="top" >
       <Container>
           <Navbar.Brand as={Link} to="/Home" id='logo' >
             <img
@@ -24,14 +24,14 @@ const Layout=()=>{
               className="d-inline-block align-top"
             />{' '}
             
-            <p style={{marginTop:"10px",marginLeft:"5px"}}> 
+            <p style={{marginTop:"10px",marginLeft:"5px",color:"black"}}> 
             Thrive </p>
           </Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/Home" id='navitems'>Home</Nav.Link>
             <Nav.Link as={Link} to="/About" id='navitems'>About</Nav.Link>
             <Nav.Link as={Link} to="/Shop" id='navitems'>Shop</Nav.Link>
-            <NavDropdown title="pages"  id='navdrop'>
+            <NavDropdown title="pages"  id='navdrop-main'>
               <NavDropdown.Item as={Link} id='navdrop' >Action</NavDropdown.Item>
               <NavDropdown.Item as={Link} id='navdrop' >Action</NavDropdown.Item>
               <NavDropdown.Item as={Link} id='navdrop' >Action</NavDropdown.Item>
@@ -54,8 +54,8 @@ const Layout=()=>{
             <UserOutlined id='user-icon' />
             <FontAwesomeIcon icon={faCartShopping} id='cart-icon'/>
             </Nav.Link>
-      </Container>
-    </Navbar>
+       </Container>
+        </Navbar>
         <Outlet/>
         </>
     )
