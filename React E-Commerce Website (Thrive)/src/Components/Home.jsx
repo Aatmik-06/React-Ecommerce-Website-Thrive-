@@ -4,13 +4,16 @@ import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import { useState, useEffect } from "react";
+import Marquee from "react-fast-marquee";
 
 const Home = () => {
   return (
     <>
       <div id="hero">
         <Container id="hero-container" >
+      
           <div id="hero-content">
+            
             <p style={{ display: "flex" }}>
               <h1 style={{ color: "black", fontSize: "50px" }}>|</h1>
               <span id="head-p">
@@ -35,8 +38,8 @@ const Home = () => {
         </Container>
       </div>
       <Container>
-      {/* <marquee behavior="scroll" direction="right" scrollamount="20" > */}
-            <div id="h2-cont">
+      <Marquee pauseOnHover speed={"100"}> 
+            <div id="h2-cont" >
               <Link
                 to="/Shop"
                 style={{
@@ -46,14 +49,60 @@ const Home = () => {
                   textAlign: "center",
                 }}
               >
-                <Card style={{ width: "18rem" }} id="home-card1">
+                <Card style={{ width: "18rem" , marginLeft:"30px"}} id="home-card1"  >
                   <Card.Img
                     variant="top"
-                    src="src/assets/Images/product-cat-1.webp"
+                    src="src/assets/Images/laptop.webp" style={{backgroundColor:"rgb(239,243,237)"}}
                   />
                   <Card.Body>
                     <Card.Title
                       style={{ fontSize: "17px", color: "rgb(82, 82, 88)" }}
+                    >
+                      Laptop & Computer Monitors
+                    </Card.Title>
+                  </Card.Body>
+                </Card>
+              </Link>
+              <Link
+                to="/Shop"
+                style={{
+                  fontSize: "17px",
+                  color: "rgb(82, 82, 88)",
+                  textDecoration: "none",
+                  textAlign: "center",
+                }}
+              >
+                <Card style={{ width: "18rem", marginLeft:"30px" }} id="home-card1">
+                  <Card.Img
+                    variant="top"
+                    src="src/assets/Images/product-cat-1.png"style={{backgroundColor:"RGB(119 167 215)",paddingBottom:"49px"}}
+                  />
+                  <Card.Body>
+                    <Card.Title
+                      style={{ fontSize: "17px", color: "rgb(82, 82, 88)" }}
+                    >
+                      Ipad & Iphones 
+                    </Card.Title>
+                  </Card.Body>
+                </Card>
+              </Link>
+              <Link
+                to="/Shop"
+                style={{
+                  fontSize: "17px",
+                  color: "rgb(82, 82, 88)",
+                  textDecoration: "none",
+                  textAlign: "center",
+                }}
+              >
+                <Card style={{ width: "18rem" , marginLeft:"30px"}} id="home-card1">
+                  <Card.Img
+                    variant="top"
+                    src="src/assets/Images/product-cat-3.webp" style={{backgroundColor:"rgb(223,243,216)",paddingBottom:"49px"}}
+                  />
+                  <Card.Body>
+                    <Card.Title
+                      style={{ fontSize: "17px", color: "rgb(82, 82, 88)" ,marginTop:"50px"}}
                     >
                       Wireless & And Watches
                     </Card.Title>
@@ -69,33 +118,10 @@ const Home = () => {
                   textAlign: "center",
                 }}
               >
-                <Card style={{ width: "18rem" }} id="home-card1">
+                <Card style={{ width: "18rem" , marginLeft:"30px"}} id="home-card1" >
                   <Card.Img
                     variant="top"
-                    src="src/assets/Images/product-cat-3.jpg"
-                  />
-                  <Card.Body>
-                    <Card.Title
-                      style={{ fontSize: "17px", color: "rgb(82, 82, 88)" }}
-                    >
-                      Wireless & And Watches
-                    </Card.Title>
-                  </Card.Body>
-                </Card>
-              </Link>
-              <Link
-                to="/Shop"
-                style={{
-                  fontSize: "17px",
-                  color: "rgb(82, 82, 88)",
-                  textDecoration: "none",
-                  textAlign: "center",
-                }}
-              >
-                <Card style={{ width: "18rem"}} id="home-card1" >
-                  <Card.Img
-                    variant="top"
-                    src="src/assets/Images/product-cat-2.webp" style={{width:"280px",height:"192px",backgroundColor:"RGB(219 233 255)"}}
+                    src="src/assets/Images/product-cat-2.webp" style={{backgroundColor:"RGB(239 205 244)"}}
                   />
                   <Card.Body>
                     <Card.Title
@@ -116,22 +142,22 @@ const Home = () => {
                   textAlign: "center",
                 }}
               >
-                <Card style={{ width: "18rem" }} id="home-card1">
+                <Card style={{ width: "18rem", marginLeft:"30px" }} id="home-card1">
                   <Card.Img
-                    variant="top"
-                    src="src/assets/Images/product-cat-7.jpg"
+                    variant="top"    
+                    src="src/assets/Images/product-cat-7.webp" style={{backgroundColor:"RGB(130 148 165)"}}
                   />
                   <Card.Body>
                     <Card.Title
                       style={{ fontSize: "17px", color: "rgb(82, 82, 88)" }}
                     >
-                      Camera Buletooth & Headset
+                     Buletooth Headset
                     </Card.Title>
                   </Card.Body>
                 </Card>
               </Link>
             </div>
-            {/* </marquee> */}
+            </Marquee>
         <hr style={{ color: "black" }} />
         <div id="popular-products">
           <div style={{ display: "flex" }}>
