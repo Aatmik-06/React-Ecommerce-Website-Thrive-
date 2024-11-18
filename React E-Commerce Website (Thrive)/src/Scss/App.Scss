@@ -125,13 +125,45 @@ margin-right: 50px;
     button:hover{
         background-color: black;
         color: white;
+        
     }
+}
+#c1{
+    height: 18rem;
+}
+#card-img{
+    transition: all 0.2s;
+    overflow: hidden;
+}
+#c-body{
+    padding: 10px;
+}
+#sb-1{
+    background-color: rgb(245, 9, 99);
+    border: none;
+    // margin-top: 30px;
+    padding: 0px 10px 0px 10px ;
+    color: white;
+    font-size: 12px;
+}
+#b1{
+    background-color: rgba(0, 0, 0, 0.852);
+    transition: all 0.2s;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+}
+// #card-img{
+//     margin-top: -20px;
+//     margin-bottom: -20px;
+// }
+#b1:hover{
+    background-color:rgb(245, 9, 99);
 }
 #hero-img{
     margin-top: 175px;
     width: auto;
     height: auto;
-    overflow: hidden;  
+    overflow-wrap: anywhere;
 }
 #head-p{
     margin-top: 9px;
@@ -152,7 +184,15 @@ margin-right: 50px;
 #popular-products{
     margin-top: 80px;
 }
+#popular-items{
+    display: flex;
+    justify-content: space-between;
+}
 
+#card-img:hover{
+    scale: (1.05);
+
+}
 
 
 

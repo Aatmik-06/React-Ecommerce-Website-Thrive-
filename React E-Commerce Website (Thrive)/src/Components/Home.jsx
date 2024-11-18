@@ -5,8 +5,62 @@ import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import { useState, useEffect } from "react";
 import Marquee from "react-fast-marquee";
+import { useDispatch } from "react-redux";
+import axios from "axios";
+import Button from 'react-bootstrap/Button';
+import ListGroup from 'react-bootstrap/ListGroup';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+
 
 const Home = () => {
+
+  const [mydata, setMydata]= useState([]);
+//  const dispatch= useDispatch();
+
+ const loadData=()=>{
+    let api="http://localhost:3000/shop";
+    axios.get(api).then((res)=>{
+        setMydata(res.data);
+    })
+ }
+
+ useEffect(()=>{
+    loadData();
+ }, []);
+
+//  const cartDataAdd=(id, name, price, categ, desc, myimg)=>{
+//   dispatch(addToCart({id:id, name:name, price:price, category:categ, description:desc, image:myimg, qnty:1}))
+//  }
+
+
+
+  
+ const ans=mydata.map((key)=>{
+  return(
+   <>
+    <div style={{width:"19rem", marginTop:"10px",border:"none",background:"rgb(247,247,247)"}} id="c1" >
+      <button id="sb-1">Sale</button>
+      <Card.Img variant="top" src={key.image} id="card-img"/>
+      <Card.Body style={{padding:"none"}}id="c-body" >
+      <Card.Title> {key.name} </Card.Title> 
+        <Card.Text style={{marginBottom:"8px"}}>
+          
+        </Card.Text>
+        <span style={{fontWeight:'bold'}}>  ${key.price} </span> 
+        </Card.Body>
+        <button id="b1" style={{border:"none",color:"white"}}
+       onClick={()=>{cartDataAdd(key.id, key.name, key.price, key.category, key.description, key.image)}} >  <FontAwesomeIcon icon={faCartShopping} />&nbsp;  Add to cart</button>
+    </div> 
+   </>
+  )
+
+})
+
+
+
+
+
+
   return (
     <>
       <div id="hero">
@@ -52,7 +106,7 @@ const Home = () => {
                 <Card style={{ width: "18rem" , marginLeft:"30px"}} id="home-card1"  >
                   <Card.Img
                     variant="top"
-                    src="src/assets/Images/laptop.webp" style={{backgroundColor:"rgb(239,243,237)"}}
+                    src="src/assets/Images/laptop.webp" style={{backgroundColor:"rgb(239,243,237)",paddingBottom:"11.5px"}}
                   />
                   <Card.Body>
                     <Card.Title
@@ -75,7 +129,7 @@ const Home = () => {
                 <Card style={{ width: "18rem", marginLeft:"30px" }} id="home-card1">
                   <Card.Img
                     variant="top"
-                    src="src/assets/Images/product-cat-1.png"style={{backgroundColor:"RGB(119 167 215)",paddingBottom:"49px"}}
+                    src="src/assets/Images/product-cat-1.png"style={{backgroundColor:"RGB(119 167 215)",paddingBottom:"2px"}}
                   />
                   <Card.Body>
                     <Card.Title
@@ -102,7 +156,7 @@ const Home = () => {
                   />
                   <Card.Body>
                     <Card.Title
-                      style={{ fontSize: "17px", color: "rgb(82, 82, 88)" ,marginTop:"50px"}}
+                      style={{ fontSize: "17px", color: "rgb(82, 82, 88)"}}
                     >
                       Wireless & And Watches
                     </Card.Title>
@@ -173,6 +227,10 @@ const Home = () => {
             >
               Popular Products
             </h2>{" "}
+          </div>
+          <div id="popular-items">
+            {ans}
+
           </div>
         </div>
       </Container>

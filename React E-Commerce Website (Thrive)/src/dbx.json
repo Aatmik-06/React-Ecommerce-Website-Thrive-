@@ -2,11 +2,35 @@
     "shop":[
         {
             "id":1,
-            "name":"t shirt",
-            "price":2300,
-            "description":"this is very good t shirt for men",
-            "category":"men",
-            "image":"https://m.media-amazon.com/images/I/713n+TxyfCL._SY879_.jpg"
+            "name":"VR Box",
+            "price":139,
+            "description":"VR Virtual Reality Headset",
+            "category":"virtual & Palner",
+            "image":"src/assets/Images/product-8.png"
+        },
+        {
+            "id":2,
+            "name":"Guild Planner - 900w",
+            "price":228,
+            "description":"Guild Planner - 900w",
+            "category":"virtual & Palner",
+            "image":"src/assets/Images/product-1.jpg"
+        },
+        {
+            "id":3,
+            "name":"STANLEY STPP7502 750W ",
+            "price":356,
+            "description":"Shop Harry.com for every day low prices. Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"virtual & Palner",
+            "image":"src/assets/Images/product-12.jpg"
+        },
+        {
+            "id":4,
+            "name":"STANLEY STPP7502 750W ",
+            "price":458,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"virtual & Palner",
+            "image":"src/assets/Images/product-11.jpg"
         }
     ]
 }
