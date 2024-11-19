@@ -128,7 +128,6 @@ margin-right: 50px;
         
     }
 }
-
 #card-img{
     transition: all 0.2s;
     overflow: hidden;
@@ -186,11 +185,16 @@ margin-right: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px;
+    transition: all 0.2s ;
 }
-
+#shop-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    transition: all 0.2s ;
+}
 #card-img:hover{
-    scale: (1.05);
-
+    scale: (1.2);
 }
 #footer{
     margin-top: 100px;
@@ -238,9 +242,20 @@ margin-right: 50px;
   }
 }
 #carticon{
-   margin-left: -5px;
-   margin-top: -10px;
-   position: relative;
+   margin-left: -8px;
+   margin-top: -15px;
+   margin-bottom: 15px;
+//    color: white;
+   background-color: white; 
+   border-radius: 50%:
+}
+#c1{
+    h5{
+        padding: 10px;
+    }
+    span{
+        padding: 0px 0px 0px 10px ;
+    }
 }
 
 
@@ -323,4 +338,9 @@ margin-right: 50px;
     #navbar{
         padding-bottom: 75px;
     }
-  }
+}
+
+
+
+
+

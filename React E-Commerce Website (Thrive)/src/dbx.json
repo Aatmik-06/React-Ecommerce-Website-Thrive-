@@ -7,6 +7,14 @@
             "description":"VR Virtual Reality Headset",
             "category":"virtual & Palner",
             "image":"src/assets/Images/product-8.png"
+        }, 
+        {
+            "id":6,
+            "name":"Apple iPad mini ",
+            "price":887.00,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"Ipad Phone & Tablets",
+            "image":"src/assets/Images/ipad.png"
         },
         {
             "id":2,
@@ -26,19 +34,172 @@
         },
         {
             "id":4,
-            "name":"STANLEY STPP7502 750W ",
-            "price":458,
-            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
-            "category":"virtual & Palner",
-            "image":"src/assets/Images/product-11.png"
+            "name":"Apple iPhone 14 Pro Max ",
+            "price":1674.59,
+            "description":"Shop Harry.com for every day low prices. Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"Ipad Phone & Tablets",
+            "image":"src/assets/Images/product-13.png"
         },
         {
             "id":5,
+            "name":"Apple iPhone 13 Pro Max",
+            "price":1660.00,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"Ipad Phone & Tablets",
+            "image":"src/assets/Images/product-14.png"
+        },
+        {
+            "id":6,
+            "name":"Xiaomi Poco M4 pro 5G",
+            "price":167.00,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"Ipad Phone & Tablets",
+            "image":"src/assets/Images/product-7.png"
+        },
+        {
+            "id":7,
+            "name":"TECLAST Tablet Protective Case ",
+            "price":791.12,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"Ipad Phone & Tablets",
+            "image":"src/assets/Images/product-3.png"
+        },
+        {
+            "id":8,
+            "name":"Case for Lenovo Yoga Tab 13 ",
+            "price":779.00,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"Ipad Phone & Tablets",
+            "image":"src/assets/Images/product-15.png"
+        },
+       
+        {
+            "id":6,
             "name":"STANLEY STPP7502 750W ",
             "price":458,
             "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
             "category":"virtual & Palner",
-            "image":"src/assets/Images/product-10.png"
+            "image":"src/assets/Images/product-9.png"
+        },
+        {
+            "id":6,
+            "name":"STANLEY STPP7502 750W ",
+            "price":458,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"virtual & Palner",
+            "image":"src/assets/Images/product-9.png"
+        },
+        {
+            "id":6,
+            "name":"STANLEY STPP7502 750W ",
+            "price":458,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"virtual & Palner",
+            "image":"src/assets/Images/product-9.png"
+        },
+        {
+            "id":6,
+            "name":"STANLEY STPP7502 750W ",
+            "price":458,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"virtual & Palner",
+            "image":"src/assets/Images/product-9.png"
+        },
+        {
+            "id":6,
+            "name":"STANLEY STPP7502 750W ",
+            "price":458,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"virtual & Palner",
+            "image":"src/assets/Images/product-9.png"
+        },
+        {
+            "id":6,
+            "name":"STANLEY STPP7502 750W ",
+            "price":458,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"virtual & Palner",
+            "image":"src/assets/Images/product-9.png"
+        },
+        {
+            "id":6,
+            "name":"STANLEY STPP7502 750W ",
+            "price":458,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"virtual & Palner",
+            "image":"src/assets/Images/product-9.png"
+        },
+        {
+            "id":6,
+            "name":"STANLEY STPP7502 750W ",
+            "price":458,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"virtual & Palner",
+            "image":"src/assets/Images/product-9.png"
+        },
+        {
+            "id":6,
+            "name":"STANLEY STPP7502 750W ",
+            "price":458,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"virtual & Palner",
+            "image":"src/assets/Images/product-9.png"
+        },
+        {
+            "id":6,
+            "name":"STANLEY STPP7502 750W ",
+            "price":458,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"virtual & Palner",
+            "image":"src/assets/Images/product-9.png"
+        },
+        {
+            "id":6,
+            "name":"STANLEY STPP7502 750W ",
+            "price":458,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"virtual & Palner",
+            "image":"src/assets/Images/product-9.png"
+        },
+        {
+            "id":6,
+            "name":"STANLEY STPP7502 750W ",
+            "price":458,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"virtual & Palner",
+            "image":"src/assets/Images/product-9.png"
+        },
+        {
+            "id":6,
+            "name":"STANLEY STPP7502 750W ",
+            "price":458,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"virtual & Palner",
+            "image":"src/assets/Images/product-9.png"
+        },
+        {
+            "id":6,
+            "name":"STANLEY STPP7502 750W ",
+            "price":458,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"virtual & Palner",
+            "image":"src/assets/Images/product-9.png"
+        },
+        {
+            "id":6,
+            "name":"STANLEY STPP7502 750W ",
+            "price":458,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"virtual & Palner",
+            "image":"src/assets/Images/product-9.png"
+        },
+        {
+            "id":6,
+            "name":"STANLEY STPP7502 750W ",
+            "price":458,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"virtual & Palner",
+            "image":"src/assets/Images/product-9.png"
         },
         {
             "id":6,

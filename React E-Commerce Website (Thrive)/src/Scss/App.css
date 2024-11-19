@@ -185,10 +185,18 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 30px;
+  transition: all 0.2s;
+}
+
+#shop-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  transition: all 0.2s;
 }
 
 #card-img:hover {
-  scale: 1.05;
+  scale: 1.2;
 }
 
 #footer {
@@ -242,9 +250,18 @@
 }
 
 #carticon {
-  margin-left: -5px;
-  margin-top: -10px;
-  position: relative;
+  margin-left: -8px;
+  margin-top: -15px;
+  margin-bottom: 15px;
+  background-color: white;
+  border-radius: 100px;
+}
+
+#c1 h5 {
+  padding: 10px;
+}
+#c1 span {
+  padding: 0px 0px 0px 10px;
 }
 
 @media screen and (max-width: 525px) {

@@ -24,7 +24,6 @@ const Layout=()=>{
               height="40"
               className="d-inline-block align-top"
             />{' '}
-            
             <p style={{marginTop:"10px",marginLeft:"5px",color:"black"}}> 
             Thrive </p>
           </Navbar.Brand>
@@ -55,19 +54,17 @@ const Layout=()=>{
             <UserOutlined id='user-icon' />
             </Nav.Link>
             <Nav.Link eventKey={2} as={Link} to="cart" >
-              
+              <div style={{display:"flex"}}>
             <FontAwesomeIcon icon={faCartShopping} id='cart-icon'/>
-            <span id="carticon"> {cartLen} </span>
-        
+            <h6 id="carticon"> {cartLen} </h6>
+            </div>
             </Nav.Link>
        </Container>
         </Navbar>
         <Outlet/>
-
         <footer id='footer'>
           <div id='footer-main'>
           <h2>Subscribe for <br />
-
           Latest Trends & Offers</h2>
           <div id='footer-input'><input type="text"  placeholder='Enter Your Email' style={{border:"none",outline:"none",width:"25rem"}}/> <button>Subscribe</button></div>
           </div>
