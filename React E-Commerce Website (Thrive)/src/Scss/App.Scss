@@ -128,9 +128,7 @@ margin-right: 50px;
         
     }
 }
-#c1{
-    height: 18rem;
-}
+
 #card-img{
     transition: all 0.2s;
     overflow: hidden;
@@ -185,14 +183,66 @@ margin-right: 50px;
     margin-top: 80px;
 }
 #popular-items{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
 }
 
 #card-img:hover{
     scale: (1.05);
 
 }
+#footer{
+    margin-top: 100px;
+    padding: 50px 200px 50px 200px;
+    background: url(src/assets/Images/cta-bg-1.3e8b3216.jpg) no-repeat center center/cover;
+}
+#footer-main{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 50px 30px 50px 30px;
+}
+#footer-input{
+    border: 2px solid black;
+    padding: 10px 10px 10px 30px;
+    height: 4.2rem;
+    button{
+        background-color: black;
+        color: white;
+        padding: 10px 40px 10px 40px ;
+        border: none;
+        transition: all 0.5s;
+    }
+    button:hover{
+        background-color: rgb(245, 9, 99);
+    }
+}
+#cart-head{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) no-repeat center center/cover;
+    background-size: 300% 300%;
+    animation: gradient 10s ease infinite;
+    text-align: center;
+    padding: 100px 100px 100px 100px ;
+    h1{
+    font-size: 70px;
+    color: white;
+    }
+    margin-bottom: 100px;
+}
+#table{
+  align-items: center;
+  margin: auto;
+  td{
+    margin-top: 50%;
+  }
+}
+#carticon{
+   margin-left: -5px;
+   margin-top: -10px;
+   position: relative;
+}
+
 
 
 

@@ -7,15 +7,14 @@ import { useState, useEffect } from "react";
 import Marquee from "react-fast-marquee";
 import { useDispatch } from "react-redux";
 import axios from "axios";
-import Button from 'react-bootstrap/Button';
-import ListGroup from 'react-bootstrap/ListGroup';
+import { addToCart } from './cartSlice';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 
 const Home = () => {
 
   const [mydata, setMydata]= useState([]);
-//  const dispatch= useDispatch();
+ const dispatch= useDispatch();
 
  const loadData=()=>{
     let api="http://localhost:3000/shop";
@@ -28,9 +27,9 @@ const Home = () => {
     loadData();
  }, []);
 
-//  const cartDataAdd=(id, name, price, categ, desc, myimg)=>{
-//   dispatch(addToCart({id:id, name:name, price:price, category:categ, description:desc, image:myimg, qnty:1}))
-//  }
+ const cartDataAdd=(id, name, price, categ, desc, myimg)=>{
+  dispatch(addToCart({id:id, name:name, price:price, category:categ, description:desc, image:myimg, qnty:1}))
+ }
 
 
 
@@ -40,17 +39,13 @@ const Home = () => {
    <>
     <div style={{width:"19rem", marginTop:"10px",border:"none",background:"rgb(247,247,247)"}} id="c1" >
       <button id="sb-1">Sale</button>
-      <Card.Img variant="top" src={key.image} id="card-img"/>
-      <Card.Body style={{padding:"none"}}id="c-body" >
-      <Card.Title> {key.name} </Card.Title> 
-        <Card.Text style={{marginBottom:"8px"}}>
-          
-        </Card.Text>
+      <img src={key.image} id="card-img" style={{width:"18rem"}} />
+      <h5> {key.name} </h5>
         <span style={{fontWeight:'bold'}}>  ${key.price} </span> 
-        </Card.Body>
         <button id="b1" style={{border:"none",color:"white"}}
        onClick={()=>{cartDataAdd(key.id, key.name, key.price, key.category, key.description, key.image)}} >  <FontAwesomeIcon icon={faCartShopping} />&nbsp;  Add to cart</button>
     </div> 
+  
    </>
   )
 

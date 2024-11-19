@@ -3,14 +3,15 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link,Outlet } from 'react-router-dom';
-import Form from 'react-bootstrap/Form';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons/faMagnifyingGlass';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Button from 'react-bootstrap/Button';
 import { UserOutlined } from '@ant-design/icons';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
+import { useSelector } from "react-redux";
 const Layout=()=>{
+  const mycart= useSelector(state=>state.mycart.cart);
+  const cartLen= mycart.length;
     return(
         <>
          <Navbar collapseOnSelect expand="lg" id='navbar' sticky="top" >
@@ -50,13 +51,27 @@ const Layout=()=>{
           </div>
           <FontAwesomeIcon icon={faBarsStaggered} className='bars' />
           </Nav>
-        <Nav.Link eventKey={2} href="#memes">
+        <Nav.Link eventKey={2} as={Link} >
             <UserOutlined id='user-icon' />
+            </Nav.Link>
+            <Nav.Link eventKey={2} as={Link} to="cart" >
+              
             <FontAwesomeIcon icon={faCartShopping} id='cart-icon'/>
+            <span id="carticon"> {cartLen} </span>
+        
             </Nav.Link>
        </Container>
         </Navbar>
         <Outlet/>
+
+        <footer id='footer'>
+          <div id='footer-main'>
+          <h2>Subscribe for <br />
+
+          Latest Trends & Offers</h2>
+          <div id='footer-input'><input type="text"  placeholder='Enter Your Email' style={{border:"none",outline:"none",width:"25rem"}}/> <button>Subscribe</button></div>
+          </div>
+        </footer>
         </>
     )
 }

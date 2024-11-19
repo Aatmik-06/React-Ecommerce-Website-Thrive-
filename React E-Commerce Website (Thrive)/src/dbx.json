@@ -14,7 +14,7 @@
             "price":228,
             "description":"Guild Planner - 900w",
             "category":"virtual & Palner",
-            "image":"src/assets/Images/product-1.jpg"
+            "image":"src/assets/Images/product-1.png"
         },
         {
             "id":3,
@@ -22,7 +22,7 @@
             "price":356,
             "description":"Shop Harry.com for every day low prices. Free shipping on orders $35+ or Pickup In-store and get",
             "category":"virtual & Palner",
-            "image":"src/assets/Images/product-12.jpg"
+            "image":"src/assets/Images/product-12.png"
         },
         {
             "id":4,
@@ -30,7 +30,23 @@
             "price":458,
             "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
             "category":"virtual & Palner",
-            "image":"src/assets/Images/product-11.jpg"
+            "image":"src/assets/Images/product-11.png"
+        },
+        {
+            "id":5,
+            "name":"STANLEY STPP7502 750W ",
+            "price":458,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"virtual & Palner",
+            "image":"src/assets/Images/product-10.png"
+        },
+        {
+            "id":6,
+            "name":"STANLEY STPP7502 750W ",
+            "price":458,
+            "description":"Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
+            "category":"virtual & Palner",
+            "image":"src/assets/Images/product-9.png"
         }
     ]
 }
