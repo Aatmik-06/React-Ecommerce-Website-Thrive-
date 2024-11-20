@@ -291,11 +291,35 @@
   font-size: 13px;
 }
 
+#shop-main {
+  margin-top: 80px;
+}
+
+#shop-head img {
+  height: 90%;
+  width: 100%;
+}
+
 #c1 h5 {
   padding: 10px;
 }
 #c1 span {
   padding: 0px 0px 0px 10px;
+}
+
+aside {
+  background-color: white;
+  padding: 20px;
+  margin-right: 50px;
+  margin-top: 50px;
+}
+
+#shop-side-items {
+  font-size: 16px;
+  height: 100%;
+  color: black;
+  display: flex;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 525px) {

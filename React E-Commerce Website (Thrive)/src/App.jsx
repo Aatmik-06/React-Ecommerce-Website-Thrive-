@@ -6,6 +6,8 @@ import Shop from "./Components/Shop";
 import ContactUs from "./Components/ContactUs";
 import Cart from "./Components/Cart";
 import Faqs from "./Components/Pages/Faqs";
+import Virtual from "./Components/Virtual";
+import Phones from "./Components/phones";
 const App=()=>{
   return (
     <>
@@ -19,6 +21,8 @@ const App=()=>{
       <Route path="/ContactUS" element={<ContactUs/>}/>
       <Route path="/Cart" element={<Cart/>}/>
       <Route path="/Faqs" element={<Faqs/>}/>
+      <Route path="/Phones" element={<Phones/>}/>
+      <Route path="/Virtual" element={<Virtual/>}/>
       </Route>
     </Routes>
     </BrowserRouter>

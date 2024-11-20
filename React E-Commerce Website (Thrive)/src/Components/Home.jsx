@@ -32,9 +32,7 @@ const Home = () => {
  }
 
 
-
-  
- const ans=mydata.map((key)=>{
+const ans=mydata.map((key)=>{
   return(
    <>
     <div style={{width:"19rem", marginTop:"10px",border:"none",background:"rgb(247,247,247)"}} id="c1" >
@@ -247,7 +245,7 @@ const Home = () => {
         <Container>
           <div id="home-offers">
             <h1 >Free Shipping on Orders $50</h1> <br />
-            <Link to="Shop"><button>Shop Now</button></Link>
+            <Link to="/Shop"><button>Shop Now</button></Link>
           </div>
         </Container>
       </Container>

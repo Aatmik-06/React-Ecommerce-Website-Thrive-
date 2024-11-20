@@ -283,6 +283,15 @@ margin-right: 50px;
    font-size: 13px;
 //    position: relative;
 }
+#shop-main{
+    margin-top: 80px;
+}
+#shop-head{
+    img{
+    height: 90%;
+    width: 100%;
+    }
+}
 #c1{
     h5{
         padding: 10px;
@@ -290,6 +299,25 @@ margin-right: 50px;
     span{
         padding: 0px 0px 0px 10px ;
     }
+}
+#shop-header{
+    
+}
+aside{
+   background-color: white;
+//    border: 1px solid black;
+   padding: 20px;
+//    border-radius: 10px;
+   margin-right: 50px;
+//    width: 300px;
+margin-top: 50px;
+}
+#shop-side-items{
+    font-size: 16px;
+    height: 100%;
+    color: black;
+    display: flex;
+    justify-content: space-between;
 }
 
 
