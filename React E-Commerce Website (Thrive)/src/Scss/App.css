@@ -172,7 +172,7 @@
 }
 
 #h2-cont {
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   justify-content: space-between;
 }
@@ -207,6 +207,7 @@
 
 #footer-main {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   background-color: white;
   padding: 50px 30px 50px 30px;
@@ -227,6 +228,11 @@
 #footer-input button:hover {
   background-color: rgb(245, 9, 99);
 }
+#footer-input input {
+  border: none;
+  outline: none;
+  width: 25rem;
+}
 
 #cart-head {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) no-repeat center center/cover;
@@ -241,6 +247,31 @@
   color: white;
 }
 
+#home-offers {
+  background: url(src/assets/Images/h1_b7.jpg) no-repeat center center/cover;
+  height: 100%;
+  width: 100%;
+  padding: 68px;
+  margin-top: 100px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+}
+#home-offers h1 {
+  font-size: 50px;
+}
+#home-offers button {
+  background-color: transparent;
+  padding: 10px 30px 10px 30px;
+  border: 2px solid black;
+  font-size: 16px;
+  transition: all 0.2s linear;
+}
+#home-offers button:hover {
+  background-color: black;
+  color: white;
+}
+
 #table {
   align-items: center;
   margin: auto;
@@ -250,11 +281,14 @@
 }
 
 #carticon {
-  margin-left: -8px;
-  margin-top: -15px;
+  margin-left: -12px;
+  margin-top: -9px;
   margin-bottom: 15px;
+  padding-left: 4.5px;
+  color: rgb(245, 9, 99);
   background-color: white;
-  border-radius: 100px;
+  border-radius: 100%;
+  font-size: 13px;
 }
 
 #c1 h5 {
@@ -265,6 +299,10 @@
 }
 
 @media screen and (max-width: 525px) {
+  #popular-items {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
   #search {
     display: none;
   }
@@ -272,6 +310,24 @@
     margin-right: 8px;
     font-size: 20px;
     display: block;
+  }
+  #footer {
+    padding: 30px 10px 30px 10px;
+  }
+  #footer input {
+    border: none;
+    outline: none;
+    width: 12rem;
+    margin-bottom: 20px;
+  }
+  #footer-main {
+    padding: 20px 20px 80px 20px;
+  }
+  #footer-input {
+    height: 2.5rem;
+  }
+  #footer-input button {
+    margin-left: 20px;
   }
 }
 @media screen and (max-width: 768px) {

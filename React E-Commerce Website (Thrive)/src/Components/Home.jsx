@@ -17,7 +17,7 @@ const Home = () => {
  const dispatch= useDispatch();
 
  const loadData=()=>{
-    let api="http://localhost:3000/shop";
+    let api="http://localhost:3000/shop/?type=new";
     axios.get(api).then((res)=>{
         setMydata(res.data);
     })
@@ -86,7 +86,22 @@ const Home = () => {
           </div>
         </Container>
       </div>
-      <Container>
+      <Container style={{marginTop:"50px"}}>
+      <div style={{ display: "flex" }}>
+            {" "}
+            <h2 style={{ color: "rgb(245, 9, 99)" }}> |</h2>{" "}
+            <h2
+              style={{
+                color: "black",
+                fontWeight: 600,
+                marginTop: "2px",
+                marginLeft: "7px",
+              }}
+            >
+              New Arrivals
+            </h2>{" "}
+          </div>
+       
       <Marquee pauseOnHover speed={"100"}> 
             <div id="h2-cont" >
               <Link
@@ -227,7 +242,14 @@ const Home = () => {
             {ans}
 
           </div>
+
         </div>
+        <Container>
+          <div id="home-offers">
+            <h1 >Free Shipping on Orders $50</h1> <br />
+            <Link to="Shop"><button>Shop Now</button></Link>
+          </div>
+        </Container>
       </Container>
     </>
   );

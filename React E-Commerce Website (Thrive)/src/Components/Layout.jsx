@@ -56,7 +56,7 @@ const Layout=()=>{
             <Nav.Link eventKey={2} as={Link} to="cart" >
               <div style={{display:"flex"}}>
             <FontAwesomeIcon icon={faCartShopping} id='cart-icon'/>
-            <h6 id="carticon"> {cartLen} </h6>
+            <h6 style={{width:"17px",height:"18px"}} id="carticon"> {cartLen} </h6>
             </div>
             </Nav.Link>
        </Container>
@@ -66,7 +66,7 @@ const Layout=()=>{
           <div id='footer-main'>
           <h2>Subscribe for <br />
           Latest Trends & Offers</h2>
-          <div id='footer-input'><input type="text"  placeholder='Enter Your Email' style={{border:"none",outline:"none",width:"25rem"}}/> <button>Subscribe</button></div>
+          <div id='footer-input'><input type="text"  placeholder='Enter Your Email'/> <button>Subscribe</button></div>
           </div>
         </footer>
         </>
