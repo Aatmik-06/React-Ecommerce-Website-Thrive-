@@ -14,9 +14,10 @@ import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import Offcanvas from 'react-bootstrap/Offcanvas';
 const Shop=()=>{
     const [mydata, setMydata]= useState([]);
+    const dispatch= useDispatch();
     
     const loadData=()=>{
-        let api="http://localhost:3000/shop";
+        let api="http://localhost:3000/shop/?page=one";
         axios.get(api).then((res)=>{
             setMydata(res.data);
         })
@@ -56,30 +57,41 @@ const Shop=()=>{
   })
     return(
         <>
-        <Container style={{display:"flex"}}>
+        <Container >
           <div id="shop-header">
-            <h3><FontAwesomeIcon icon={faHouse} /> Home<FontAwesomeIcon icon={faChevronRight} />  Products</h3>
+            <p><FontAwesomeIcon icon={faHouse} id="icon"  /> &nbsp; Home&nbsp;&nbsp;<FontAwesomeIcon icon={faChevronRight} /> &nbsp; Shop &nbsp;<FontAwesomeIcon icon={faChevronRight}/> &nbsp;Products</p>
           </div>
+          <div id="shop-cont">
         <aside>
           <div id="aside">
-          <Link style={{textDecoration:"none"}} to="/Phones">  <p id="shop-side-items"> Ipad Phone & Tablets <FontAwesomeIcon icon={faChevronRight} /> </p>  </Link>
-          <Link style={{textDecoration:"none"}} to="/Virtual">  <p id="shop-side-items"> Virtual devices & Planer <FontAwesomeIcon icon={faChevronRight} /> </p>  </Link>
-          <Link style={{textDecoration:"none"}} to="/Wireless">  <p id="shop-side-items"> Wireless & Watches <FontAwesomeIcon icon={faChevronRight} /> </p>  </Link>
-          <Link style={{textDecoration:"none"}} to="/Laptops">  <p id="shop-side-items"> Computers Monitor & Laptop <FontAwesomeIcon icon={faChevronRight} /> </p>  </Link>
-          <Link style={{textDecoration:"none"}} to="/Exercise">  <p id="shop-side-items"> Exercise Bike & Shaver Clean <FontAwesomeIcon icon={faChevronRight} /> </p>  </Link>
-          <Link style={{textDecoration:"none"}} to="/Kettel">  <p id="shop-side-items"> Spinning Reel & Kettle <FontAwesomeIcon icon={faChevronRight} /> </p>  </Link>
-          <Link style={{textDecoration:"none"}} to="/headset">  <p id="shop-side-items"> Camera Bluetooth & Headset <FontAwesomeIcon icon={faChevronRight} /> </p>  </Link>
+          {/* <div id="aside-items-1">  */}
+          <Link style={{textDecoration:"none"}}  to="/Shop">  <p id="shop-side-items"> All Categories <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>                             
+          <Link style={{textDecoration:"none"}}  to="/Phones">  <p id="shop-side-items"> Ipad Phone & Tablets <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    
+          <Link style={{textDecoration:"none"}}  to="/Virtual">  <p id="shop-side-items"> Virtual devices & Planer <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    
+          <Link style={{textDecoration:"none"}}  to="/Wireless">  <p id="shop-side-items"> Wireless & Watches <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    
+          <Link style={{textDecoration:"none"}}  to="/Laptops">  <p id="shop-side-items"> Computers Monitor & Laptop <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    
+          <Link style={{textDecoration:"none"}}  to="/Exercise">  <p id="shop-side-items"> Exercise Bike & Shaver Clean <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    
+          <Link style={{textDecoration:"none"}}  to="/Kettel">  <p id="shop-side-items"> Spinning Reel & Kettle <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    
+          <Link style={{textDecoration:"none"}}  to="/headset">  <p id="shop-side-items"> Camera Bluetooth & Headset <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    
+          {/* </div> */}
           <br /><br />
-          <img src="src/assets/Images/o-banner3.jpg" alt="" style={{height:"100%",width:"100%"}} />
+        <Link to="/">  <img src="src/assets/Images/o-banner3.jpg" alt="" id="aside-img" style={{height:"100%",width:"100%"}} /></Link>
         </div>
         </aside>
         <div id="shop-main">
           <div id="shop-head">
-          <img src="src/assets/Images/shop-banner.jpg" alt="" />
+         <Link to="/"> <img src="src/assets/Images/shop-banner.jpg" alt="" /> </Link>
+         <div id="items-result"><h6><span style={{color:"rgb(120, 120, 120)",textAlign:"left"}}> Showing 1–15 of 20 results </span></h6></div>
           </div>
           <div id="shop-items">
             {ans}
             </div>
+            <div id="pages-number">
+              <button>1</button>
+              <button>2</button>
+              <button>3</button>
+            </div>
+          </div>
           </div>
           </Container>
         </>

@@ -244,7 +244,7 @@ const ans=mydata.map((key)=>{
         </div>
         <Container>
           <div id="home-offers">
-            <h1 >Free Shipping on Orders $50</h1> <br />
+            <h1 >Free Shipping on Orders Above $50</h1> <br />
             <Link to="/Shop"><button>Shop Now</button></Link>
           </div>
         </Container>

@@ -69,6 +69,15 @@ const Layout=()=>{
           <div id='footer-input'><input type="text"  placeholder='Enter Your Email'/> <button>Subscribe</button></div>
           </div>
         </footer>
+        <div id='pay'>
+          <div> <p style={{color:"white" ,fontSize:"12px"}}> © 2020-2024. All rights reserved.</p></div>
+          <div>
+            <img style={{width:"45px"}} src="src/assets/Images/visa.png" alt="" />
+            <img style={{width:"45px"}} src="src/assets/Images/western-union.png" alt="" />
+            <img style={{width:"45px"}} src="src/assets/Images/mastercard.png" alt="" />
+            <img style={{width:"45px"}} src="src/assets/Images/american-express.png" alt="" />
+            </div>
+          </div>
         </>
     )
 }

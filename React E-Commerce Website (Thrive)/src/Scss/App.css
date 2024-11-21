@@ -259,6 +259,7 @@
 }
 #home-offers h1 {
   font-size: 50px;
+  font-weight: 350;
 }
 #home-offers button {
   background-color: transparent;
@@ -292,12 +293,47 @@
 }
 
 #shop-main {
-  margin-top: 80px;
+  margin-top: 50px;
+}
+
+#shop-header {
+  margin-top: 30px;
+  width: 100%;
+  background-color: rgba(222, 222, 222, 0.23);
+  border: 1px solid rgb(150, 150, 150);
+  padding: 7px 0px 0px 30px;
+  color: rgb(82, 82, 88);
+  height: 40px;
+}
+#shop-header #icon {
+  color: rgb(245, 9, 99);
 }
 
 #shop-head img {
   height: 90%;
   width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.36);
+}
+
+#aside-img {
+  transition: all 0.2s;
+}
+
+#aside-img:hover {
+  scale: 1.03;
+  overflow: hidden;
+}
+
+#shop-cont {
+  display: flex;
+}
+
+#aside-items-1 {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgba(230, 230, 230, 0.426);
 }
 
 #c1 h5 {
@@ -307,11 +343,52 @@
   padding: 0px 0px 0px 10px;
 }
 
+#items-result {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  border: 1px solid rgb(82, 82, 88);
+  border-radius: 7px;
+}
+
+#pages-number {
+  text-align: center;
+}
+#pages-number button {
+  margin-left: 10px;
+  padding: 7px 14px 7px 14px;
+  margin-top: 30px;
+  transition: all 0.2s;
+  border: 1px solid rgb(150, 150, 150);
+  font-size: 17px;
+  background-color: white;
+}
+#pages-number button:hover {
+  background-color: rgb(245, 9, 99);
+  color: white;
+  border: 1px solid white;
+}
+
+#pay {
+  background-color: rgb(39, 39, 39);
+  padding: 18px;
+  display: flex;
+  justify-content: space-around;
+}
+#pay p {
+  margin-top: 12px;
+}
+#pay img {
+  margin-right: 20px;
+}
+
 aside {
   background-color: white;
   padding: 20px;
   margin-right: 50px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 #shop-side-items {
@@ -320,6 +397,11 @@ aside {
   color: black;
   display: flex;
   justify-content: space-between;
+  transition: all 0.3s;
+}
+
+#shop-side-items:hover {
+  color: rgb(245, 9, 99);
 }
 
 @media screen and (max-width: 525px) {
