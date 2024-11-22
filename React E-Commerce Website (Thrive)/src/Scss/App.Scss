@@ -67,7 +67,7 @@
 }
 #logo{
     display: flex;
-    margin-top: 8px;
+    // margin-top: 8px;
 margin-right: 50px;
 }
 #user-icon{
@@ -196,6 +196,15 @@ margin-right: 50px;
 #card-img:hover{
     scale: (1.2);
 }
+#footer-services{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+#services-c1{
+    width: 250px;
+    text-align: center;
+}
 #footer{
     margin-top: 100px;
     padding: 50px 200px 50px 200px;
@@ -240,12 +249,38 @@ margin-right: 50px;
     }
     margin-bottom: 100px;
 }
+
+#home-offers-foot{
+    background: url(src/assets/Images/banner-offer.png) no-repeat center center/cover;
+    width: 100%;
+    padding: 80px 68px 80px 80px ;
+    margin-top: 100px;
+    h1{
+        font-size: 50px;
+        font-weight: 650;
+        z-index: 1;
+        color: black;
+    }
+    button{
+        background-color: white;
+        padding: 10px 30px 10px 30px ;
+        border: none;
+        font-size: 16px;
+        transition: all 0.2s linear;
+    }
+    button:hover{
+        background-color: rgb(245, 9, 99);
+        color: white;
+        
+    }
+   
+}
 #home-offers{
     background: url(src/assets/Images/h1_b7.jpg) no-repeat center center/cover;
     height: 100%;
     width: 100%;
     padding: 68px;
-    margin-top: 100px;
+    margin-top: 50px;
     color: white;
     text-align: center;
     border-radius: 10px;
@@ -288,16 +323,32 @@ margin-right: 50px;
     margin-top: 50px;
 }
 #shop-header{
-    margin-top: 30px;
+    margin-top: 25px;
     width: 100%;
-    background-color: rgba(222, 222, 222, 0.23);
-    border: 1px solid rgb(150, 150, 150);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) no-repeat center center/cover;
+      background-size: 300% 300%;
+      animation: gradient 10s ease infinite;
+    // border: 1px solid rgb(150, 150, 150);
+    border-radius: 7px;
     padding: 7px 0px 0px 30px;
-    color: rgb(82, 82, 88);
+    color: white;
     height: 40px;
-    #icon{
-        color: rgb(245, 9, 99);
-    }
+}
+
+#aside-d3{
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(230, 230, 230, 0.426);
+    padding: 1px 12px 15px 12px;
+    border-radius: 10px;
+}
+#aside-d3-11{
+        margin-top: 35px;
+}
+#aside-d3-1{
+    margin-top: 35px;
 }
 #shop-head{
     img{
@@ -337,7 +388,7 @@ margin-right: 50px;
     padding-right: 10px;
     padding-left: 10px;
     padding-top: 5px;
-    border: 1px solid rgb(82, 82, 88);
+    // border: 1px solid rgb(82, 82, 88);
     border-radius: 7px;
     // background-color: #ebf5ff;
 }
@@ -379,7 +430,7 @@ aside{
 //    border-radius: 10px;
    margin-right: 50px;
 //    width: 450px;
-margin-top: 30px;
+margin-top: 50px;
 }
 #shop-side-items{
     font-size: 16px;
@@ -392,7 +443,18 @@ margin-top: 30px;
 #shop-side-items:hover{
     color: rgb(245, 9, 99);
 }
-
+#btn-filter{
+    padding: 5px 10px 5px 10px;
+    width: 100%;
+    background-color: white;
+    border: 1px solid black;
+    transition: all 0.2s ;
+}
+#btn-filter:hover{
+    background-color: rgb(245, 9, 99);
+    color: white;
+    border: 1px solid white;
+}
 
 
 

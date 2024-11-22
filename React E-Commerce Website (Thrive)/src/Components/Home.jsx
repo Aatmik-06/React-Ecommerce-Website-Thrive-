@@ -242,12 +242,13 @@ const ans=mydata.map((key)=>{
           </div>
 
         </div>
-        <Container>
-          <div id="home-offers">
-            <h1 >Free Shipping on Orders Above $50</h1> <br />
+          <div id="home-offers-foot">
+            <p>Apple iPhone 13 Pro</p>
+            <h1 >The wait is over : <br />iphone 13 pro max</h1> <br />
+            <p>Last call for up to <span style={{fontSize:"25px",fontWeight:"700"}}>32%</span> off!</p>
             <Link to="/Shop"><button>Shop Now</button></Link>
           </div>
-        </Container>
+         
       </Container>
     </>
   );

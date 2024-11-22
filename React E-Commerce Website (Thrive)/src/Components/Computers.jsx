@@ -10,7 +10,7 @@ import { Container } from "react-bootstrap";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons/faChevronRight";
 import { Link } from "react-router-dom";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
-const Phones =()=>{
+const Computers =()=>{
     const [mydata, setMydata]= useState([]);
     const dispatch= useDispatch();
     const [lowPrice, setLowPrice]=useState("");
@@ -18,13 +18,13 @@ const Phones =()=>{
     const [showFilter, setShowFilter]=useState(true);
     
     const loadData=()=>{
-        let api="http://localhost:3000/shop/?category=IpadPhone Tablets";
+        let api="http://localhost:3000/shop/?category=Computers Monitor Laptop";
         axios.get(api).then((res)=>{
             setMydata(res.data);
         })
      }
      const showData=()=>{
-      let api="http://localhost:3000/shop/?category=IpadPhone Tablets";
+      let api="http://localhost:3000/shop/?category=Computers Monitor Laptop";
       axios.get(api).then((res)=>{
           setShowFilter(false);
           setMydata(res.data);
@@ -88,10 +88,10 @@ if (key.price>=lowPrice && key.price<=highPrice)
           <div id="aside">
           {/* <div id="aside-items-1">  */}
           <Link style={{textDecoration:"none"}}  to="/Shop">  <p id="shop-side-items"> All Categories <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>                          
-          <Link style={{textDecoration:"none"}}  to="/Phones">  <p id="shop-side-items"> Ipad Phone & Tablets <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    <hr />
+          <Link style={{textDecoration:"none"}}  to="/Phones">  <p id="shop-side-items"> Ipad Phone & Tablets <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>   
           <Link style={{textDecoration:"none"}}  to="/Virtual">  <p id="shop-side-items"> Virtual devices & Planer <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    
-          <Link style={{textDecoration:"none"}}  to="/Wireless">  <p id="shop-side-items"> Wireless & Watches <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    
-          <Link style={{textDecoration:"none"}}  to="/Computers">  <p id="shop-side-items"> Computers Monitor & Laptop <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    
+          <Link style={{textDecoration:"none"}}  to="/Wireless">  <p id="shop-side-items"> Wireless & Watches <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>     
+          <Link style={{textDecoration:"none"}}  to="/Laptops">  <p id="shop-side-items"> Computers Monitor & Laptop <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    <hr /> 
           <Link style={{textDecoration:"none"}}  to="/Exercise">  <p id="shop-side-items"> Exercise Bike & Shaver Clean <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    
           <Link style={{textDecoration:"none"}}  to="/Kettel">  <p id="shop-side-items"> Spinning Reel & Kettle <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    
           <Link style={{textDecoration:"none"}}  to="/headset">  <p id="shop-side-items"> Camera Bluetooth & Headset <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    
@@ -127,7 +127,7 @@ if (key.price>=lowPrice && key.price<=highPrice)
         </aside>
         <div id="shop-main">
           <div id="shop-head">
-         <Link to="/Phones"> <img src="src/assets/Images/o-banner.jpg" alt="" /> </Link>
+          <Link to="/Shop"> <img src="src/assets/Images/shop-banner.jpg" alt="" /> </Link>
          <div id="items-result"><h6><span style={{color:"rgb(120, 120, 120)",textAlign:"left"}}> Showing 1–15 of 20 results </span></h6></div>
           </div>
             <div id="shop-items">
@@ -146,4 +146,4 @@ if (key.price>=lowPrice && key.price<=highPrice)
         </>
     )
 }
-export default Phones;
+export default Computers;

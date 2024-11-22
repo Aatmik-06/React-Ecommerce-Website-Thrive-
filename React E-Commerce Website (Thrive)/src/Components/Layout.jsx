@@ -20,12 +20,12 @@ const Layout=()=>{
             <img
               alt=""
               src="src/assets/logo.png"
-              width="40"
-              height="40"
+              width="45"
+              height="45"
               className="d-inline-block align-top"
             />{' '}
-            <p style={{marginTop:"10px",marginLeft:"5px",color:"black"}}> 
-            Thrive </p>
+            <h4 style={{marginTop:"10px",marginLeft:"5px"}}> 
+            Electronix </h4>
           </Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/Home" id='navitems'>Home</Nav.Link>
@@ -62,6 +62,30 @@ const Layout=()=>{
        </Container>
         </Navbar>
         <Outlet/>
+        <Container>
+        <div id="footer-services">
+          <div id='services-c1'>
+            <img src="src/assets/Images/g-truck.png" alt="" />
+            <h5>Worldwide Delivery</h5>
+            <p> With sites in 5 languages, we ship to over 200 countries & regions.</p>
+          </div>
+          <div id='services-c1'>
+            <img src="src/assets/Images/g-credit.png" alt="" />
+            <h5>Safe Payment</h5>
+            <p> Pay with the world’s most popular and secure payment methods.</p>
+          </div>
+          <div id='services-c1'>
+            <img src="src/assets/Images/g-safety.png" alt="" />
+            <h5>Shop with Confidence</h5>
+            <p>Our Buyer Protection covers your purchase from click to delivery.</p>
+          </div>
+          <div id='services-c1'>
+            <img src="src/assets/Images/g-tele.png" alt="" />
+            <h5>24/7 Help Center</h5>
+            <p> Round-the-clock assistance for a smooth shopping experience.</p>
+          </div>
+          </div>
+        </Container>
         <footer id='footer'>
           <div id='footer-main'>
           <h2>Subscribe for <br />
@@ -73,9 +97,10 @@ const Layout=()=>{
           <div> <p style={{color:"white" ,fontSize:"12px"}}> © 2020-2024. All rights reserved.</p></div>
           <div>
             <img style={{width:"45px"}} src="src/assets/Images/visa.png" alt="" />
-            <img style={{width:"45px"}} src="src/assets/Images/western-union.png" alt="" />
+            <img style={{width:"45px"}} src="src/assets/Images/paypal.png" alt="" />
             <img style={{width:"45px"}} src="src/assets/Images/mastercard.png" alt="" />
             <img style={{width:"45px"}} src="src/assets/Images/american-express.png" alt="" />
+            <img style={{width:"45px"}} src="src/assets/Images/western-union.png" alt="" />
             </div>
           </div>
         </>

@@ -8,6 +8,8 @@ import Cart from "./Components/Cart";
 import Faqs from "./Components/Pages/Faqs";
 import Virtual from "./Components/Virtual";
 import Phones from "./Components/phones";
+import Wireless from "./Components/Wireless";
+import Computers from "./Components/Computers";
 const App=()=>{
   return (
     <>
@@ -23,6 +25,8 @@ const App=()=>{
       <Route path="/Faqs" element={<Faqs/>}/>
       <Route path="/Phones" element={<Phones/>}/>
       <Route path="/Virtual" element={<Virtual/>}/>
+      <Route path="/Wireless" element={<Wireless/>}/>
+      <Route path="/Computers" element={<Computers/>}/>
       </Route>
     </Routes>
     </BrowserRouter>
