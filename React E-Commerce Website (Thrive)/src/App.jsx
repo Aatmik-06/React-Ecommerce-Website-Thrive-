@@ -10,6 +10,8 @@ import Virtual from "./Components/Virtual";
 import Phones from "./Components/phones";
 import Wireless from "./Components/Wireless";
 import Computers from "./Components/Computers";
+import Checkout from "./Components/Checkout";
+import ProductDetails from "./Components/ProductDetails";
 const App=()=>{
   return (
     <>
@@ -27,6 +29,9 @@ const App=()=>{
       <Route path="/Virtual" element={<Virtual/>}/>
       <Route path="/Wireless" element={<Wireless/>}/>
       <Route path="/Computers" element={<Computers/>}/>
+
+      <Route  path="productdetail/:id" element={<ProductDetails/>}/>
+      <Route path="/Checkout/:amt" element={<Checkout/>}/>
       </Route>
     </Routes>
     </BrowserRouter>

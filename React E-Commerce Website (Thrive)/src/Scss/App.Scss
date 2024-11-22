@@ -297,8 +297,7 @@ margin-right: 50px;
     }
     button:hover{
         background-color: black;
-        color: white;
-        
+        color: white;        
     }
 }
 #table{
@@ -455,7 +454,55 @@ margin-top: 50px;
     color: white;
     border: 1px solid white;
 }
-
+#cart-Total{
+    // width: 500px;
+    display: flex;
+    justify-content: end;
+    #cart-h5{
+        display: flex;
+        justify-content: space-between;
+        width: 400px;
+    }
+    #cart-t{
+        // border: 1px solid black;
+        padding: 20px 40px 20px 40px;
+        // background: linear-gradient(-45deg, #ee765248, #e73c7e45, #23a5d53f, #23d5ab4c) no-repeat center center/cover;
+        // background-size: 150% 150%;
+        // animation: gradient 10s ease infinite;
+        background-color: #afc6cd86;
+        // color: white;
+    }
+    button{
+        width: 100%;
+        background-color: white;
+        padding: 10px 10px 10px 10px;
+        font-size: 18px;
+        transition: all 0.3s;
+        border: none;
+        color: black;
+        // border: 1.5px solid black;
+    }
+    button:hover{
+        color: white;
+        background-color: rgb(245, 9, 99);
+    }
+    
+}
+#pay-p{
+    font-size: 12px;
+    color: white;
+}
+#payment-images{
+    width: 45px;
+}
+#btn-incri{
+    border: none;
+    background-color: transparent;
+    transition: all 0.3s;
+}
+#btn-incri:hover{
+    color: #23a6d5;
+}
 
 
 
@@ -504,6 +551,23 @@ margin-top: 50px;
 
 
 @media screen and (max-width: 525px) {
+    #cart-Total {
+        // #cart-Total{
+        // width: 300px;
+        #cart-h5{
+            width: 220px;
+            h5{
+            font-size: 15px;
+            }
+        }
+    }
+    #cart-head{
+        h1{
+        font-size: 30px;
+        }
+        padding: 40px  ;
+        margin-bottom: 50px;
+    }
     #popular-items{
         display: grid;
         grid-template-columns: 1fr;
@@ -533,6 +597,26 @@ margin-top: 50px;
         button{
             margin-left: 20px;
         }
+    }
+    #footer-services{
+        flex-wrap: wrap;
+    }
+    #payment-images{
+        width: 25px;
+    }
+    #pay{
+        p{
+            margin-top: 5px;
+        }
+        img{
+            margin-right: 10px;
+        }
+        flex-wrap: wrap;
+
+    }
+    #pay-p{
+        font-size: 9px;
+        color: white;
     }
 }
 @media screen and (max-width: 768px) {

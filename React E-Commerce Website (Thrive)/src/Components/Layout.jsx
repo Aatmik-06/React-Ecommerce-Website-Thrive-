@@ -94,13 +94,13 @@ const Layout=()=>{
           </div>
         </footer>
         <div id='pay'>
-          <div> <p style={{color:"white" ,fontSize:"12px"}}> © 2020-2024. All rights reserved.</p></div>
+          <div> <p id='pay-p'> © 2020-2024. All rights reserved.</p></div>
           <div>
-            <img style={{width:"45px"}} src="src/assets/Images/visa.png" alt="" />
-            <img style={{width:"45px"}} src="src/assets/Images/paypal.png" alt="" />
-            <img style={{width:"45px"}} src="src/assets/Images/mastercard.png" alt="" />
-            <img style={{width:"45px"}} src="src/assets/Images/american-express.png" alt="" />
-            <img style={{width:"45px"}} src="src/assets/Images/western-union.png" alt="" />
+            <img id='payment-images' src="src/assets/Images/visa.png" alt="" />
+            <img id='payment-images' src="src/assets/Images/paypal.png" alt="" />
+            <img id='payment-images' src="src/assets/Images/mastercard.png" alt="" />
+            <img id='payment-images' src="src/assets/Images/american-express.png" alt="" />
+            <img id='payment-images' src="src/assets/Images/western-union.png" alt="" />
             </div>
           </div>
         </>
