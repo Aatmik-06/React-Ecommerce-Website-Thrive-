@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import { useDispatch } from 'react-redux';
 import { addToCart } from './cartSlice';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
