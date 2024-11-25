@@ -8,7 +8,7 @@ import { Container } from "react-bootstrap";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons/faChevronRight";
 import { Link } from "react-router-dom";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
-const Phones =()=>{
+const Phones=()=>{
     const [mydata, setMydata]= useState([]);
     const dispatch= useDispatch();
     const [lowPrice, setLowPrice]=useState("");
