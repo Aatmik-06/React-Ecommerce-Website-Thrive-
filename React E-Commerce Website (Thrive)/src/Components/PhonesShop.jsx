@@ -8,7 +8,7 @@ import { Container } from "react-bootstrap";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons/faChevronRight";
 import { Link } from "react-router-dom";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
-const Phones=()=>{
+const PhonesShop=()=>{
     const [mydata, setMydata]= useState([]);
     const dispatch= useDispatch();
     const [lowPrice, setLowPrice]=useState("");
@@ -144,4 +144,4 @@ if (key.price>=lowPrice && key.price<=highPrice)
         </>
     )
 }
-export default Phones;
+export default PhonesShop;
