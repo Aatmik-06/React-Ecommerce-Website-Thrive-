@@ -4,6 +4,9 @@ import Form from 'react-bootstrap/Form';
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons/faChevronRight";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Checkout =()=>{
     const {amt}= useParams();
     const [paymethod, setPayMethod]= useState("");
@@ -38,9 +41,14 @@ const Checkout =()=>{
     }
     return(
         <>
+        <div id="cart-head" >
+            <h1> Checkout </h1>
+            <div id="cart-header">
+            <p><FontAwesomeIcon icon={faHouse} id="icon"  /> &nbsp; Home&nbsp;&nbsp;<FontAwesomeIcon icon={faChevronRight} /> &nbsp; Checkout </p>
+            </div>
+            </div>
         <Container>
-        <h1>Add Details</h1>
-        <h1> CheckOut</h1>
+        
           <h3 align="center"> Total Payble Amount : {amt}</h3>
 
           <div id="paydesign">

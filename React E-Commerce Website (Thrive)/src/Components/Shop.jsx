@@ -87,7 +87,7 @@ const Shop=()=>{
           <div id="aside">
           {/* <div id="aside-items-1">  */}
           <Link style={{textDecoration:"none"}}  to="/Shop">  <p id="shop-side-items"> All Categories <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>   <hr />                          
-          <Link style={{textDecoration:"none"}}  to="/Phones">  <p id="shop-side-items"> Ipad Phone & Tablets <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    
+          <Link style={{textDecoration:"none"}}  to="/PhonesShop">  <p id="shop-side-items"> Ipad Phone & Tablets <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    
           <Link style={{textDecoration:"none"}}  to="/Virtual">  <p id="shop-side-items"> Virtual devices & Planer <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    
           <Link style={{textDecoration:"none"}}  to="/Wireless">  <p id="shop-side-items"> Wireless & Watches <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    
           <Link style={{textDecoration:"none"}}  to="/Computers">  <p id="shop-side-items"> Computers Monitor & Laptop <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    
@@ -109,7 +109,7 @@ const Shop=()=>{
 
           <br /><br /> <br /> <br />
           
-        <Link to="/Phones">  <img src="src/assets/Images/o-banner3.jpg" alt="" id="aside-img" style={{height:"100%",width:"100%"}} /></Link>
+        <Link to="/PhonesShop">  <img src="src/assets/Images/o-banner3.jpg" alt="" id="aside-img" style={{height:"100%",width:"100%"}} /></Link>
         </div>
         <div id="aside-d3">
            <div id="aside-d3-img">
@@ -126,7 +126,7 @@ const Shop=()=>{
         </aside>
         <div id="shop-main">
           <div id="shop-head">
-         <Link to="/Phones"> <img src="src/assets/Images/o-banner.jpg" alt="" /> </Link>
+         <Link to="/PhonesShop"> <img src="src/assets/Images/o-banner.jpg" alt="" /> </Link>
          <div id="items-result"><h6><span style={{color:"rgb(120, 120, 120)",textAlign:"left"}}> Showing 1–15 of 20 results </span></h6></div>
           </div>
             <div id="shop-items">

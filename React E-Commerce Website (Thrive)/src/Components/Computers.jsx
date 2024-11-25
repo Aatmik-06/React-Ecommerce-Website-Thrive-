@@ -88,7 +88,7 @@ if (key.price>=lowPrice && key.price<=highPrice)
           <div id="aside">
           {/* <div id="aside-items-1">  */}
           <Link style={{textDecoration:"none"}}  to="/Shop">  <p id="shop-side-items"> All Categories <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>                          
-          <Link style={{textDecoration:"none"}}  to="/Phones">  <p id="shop-side-items"> Ipad Phone & Tablets <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>   
+          <Link style={{textDecoration:"none"}}  to="/PhonesShop">  <p id="shop-side-items"> Ipad Phone & Tablets <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>   
           <Link style={{textDecoration:"none"}}  to="/Virtual">  <p id="shop-side-items"> Virtual devices & Planer <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    
           <Link style={{textDecoration:"none"}}  to="/Wireless">  <p id="shop-side-items"> Wireless & Watches <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>     
           <Link style={{textDecoration:"none"}}  to="/Laptops">  <p id="shop-side-items"> Computers Monitor & Laptop <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>    <hr /> 
@@ -110,7 +110,7 @@ if (key.price>=lowPrice && key.price<=highPrice)
 
           <br /><br /> <br /> <br />
           
-        <Link to="/Phones">  <img src="src/assets/Images/o-banner3.jpg" alt="" id="aside-img" style={{height:"100%",width:"100%"}} /></Link>
+        <Link to="/PhonesShop">  <img src="src/assets/Images/o-banner3.jpg" alt="" id="aside-img" style={{height:"100%",width:"100%"}} /></Link>
         </div>
         <div id="aside-d3">
            <div id="aside-d3-img">

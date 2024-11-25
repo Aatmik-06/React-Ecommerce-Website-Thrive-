@@ -208,7 +208,7 @@ margin-right: 50px;
 #footer{
     margin-top: 100px;
     padding: 50px 200px 50px 200px;
-    background: url(src/assets/Images/cta-bg-1.3e8b3216.jpg) no-repeat center center/cover;
+    background: url(../assets/Images/cta-bg-1.3e8b3216.jpg) no-repeat center center/cover;
 }
 #footer-main{
     display: flex;
@@ -251,7 +251,7 @@ margin-right: 50px;
 }
 
 #home-offers-foot{
-    background: url(src/assets/Images/banner-offer.png) no-repeat center center/cover;
+    background: url(../assets/Images/banner-offer.png) no-repeat center center/cover;
     width: 100%;
     padding: 80px 68px 80px 80px ;
     margin-top: 100px;
@@ -276,7 +276,7 @@ margin-right: 50px;
    
 }
 #home-offers{
-    background: url(src/assets/Images/h1_b7.jpg) no-repeat center center/cover;
+    background: url(../assets/Images/h1_b7.jpg) no-repeat center center/cover;
     height: 100%;
     width: 100%;
     padding: 68px;
@@ -500,7 +500,6 @@ margin-top: 50px;
         color: white;
         background-color: rgb(245, 9, 99);
     }
-    
 }
 #pay-p{
     font-size: 12px;
@@ -538,7 +537,9 @@ margin-top: 50px;
         width: 100%;
         color: white;
 }
-
+#paydesign{
+    display: flex;
+}
 
 
 
@@ -569,12 +570,6 @@ margin-top: 50px;
 //        left: 0%;
 //    }
 // }
-
-
-
-
-
-
 
 
 

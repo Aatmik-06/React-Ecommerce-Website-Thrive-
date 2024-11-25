@@ -212,7 +212,7 @@
 #footer {
   margin-top: 100px;
   padding: 50px 200px 50px 200px;
-  background: url(src/assets/Images/cta-bg-1.3e8b3216.jpg) no-repeat center center/cover;
+  background: url(../assets/Images/cta-bg-1.3e8b3216.jpg) no-repeat center center/cover;
 }
 
 #footer-main {
@@ -258,7 +258,7 @@
 }
 
 #home-offers-foot {
-  background: url(src/assets/Images/banner-offer.png) no-repeat center center/cover;
+  background: url(../assets/Images/banner-offer.png) no-repeat center center/cover;
   width: 100%;
   padding: 80px 68px 80px 80px;
   margin-top: 100px;
@@ -282,7 +282,7 @@
 }
 
 #home-offers {
-  background: url(src/assets/Images/h1_b7.jpg) no-repeat center center/cover;
+  background: url(../assets/Images/h1_b7.jpg) no-repeat center center/cover;
   height: 100%;
   width: 100%;
   padding: 68px;
@@ -549,6 +549,10 @@ aside {
   margin-top: 20px;
   width: 100%;
   color: white;
+}
+
+#paydesign {
+  display: flex;
 }
 
 @media screen and (max-width: 525px) {
