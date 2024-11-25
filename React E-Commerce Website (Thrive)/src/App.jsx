@@ -11,7 +11,7 @@ import Wireless from "./Components/Wireless";
 import Computers from "./Components/Computers";
 import Checkout from "./Components/Checkout";
 import ProductDetails from "./Components/ProductDetails";
-import Phones from "./Components/Phone.jsx";
+import Phones from "./Components/PhoneShop";
 const App=()=>{
   return (
     <>
