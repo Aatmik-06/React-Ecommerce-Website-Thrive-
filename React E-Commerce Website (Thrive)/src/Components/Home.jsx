@@ -43,15 +43,10 @@ const ans=mydata.map((key)=>{
         <button id="b1" style={{border:"none",color:"white"}}
        onClick={()=>{cartDataAdd(key.id, key.name, key.price, key.category, key.description, key.image)}} >  <FontAwesomeIcon icon={faCartShopping} />&nbsp;  Add to cart</button>
     </div> 
-  
    </>
   )
 
 })
-
-
-
-
 
 
   return (
@@ -98,7 +93,7 @@ const ans=mydata.map((key)=>{
             >
               New Arrivals
             </h2>{" "}
-          </div>
+      </div>
        
       <Marquee pauseOnHover speed={"100"}> 
             <div id="h2-cont" >

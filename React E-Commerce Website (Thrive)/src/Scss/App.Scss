@@ -300,6 +300,20 @@ margin-right: 50px;
         color: white;        
     }
 }
+#modal-body{
+    justify-content: space-between;
+    display: flex;
+    text-align: center;
+    Button{
+        background-color: rgb(245, 9, 99);
+        border: none;
+        transition: all 0.3s;
+        margin-top: 10px;
+    }
+    Button:hover{
+        background-color: #23a6d5;
+    }
+}
 #table{
   align-items: center;
   margin: auto;
@@ -503,7 +517,27 @@ margin-top: 50px;
 #btn-incri:hover{
     color: #23a6d5;
 }
-
+#empty-cart{
+    // display: none;
+    text-align: center;
+    button{
+        border: none;
+        background-color: rgb(132, 147, 188);
+        padding: 10px 20px 10px 20px;
+        transition: all 0.2s ;
+        color: white;
+        background-color: black;
+    }
+    button:hover{
+        background-color: rgb(245, 9, 99);
+        color: white;
+    }
+}
+#cart-header{
+        margin-top: 20px;
+        width: 100%;
+        color: white;
+}
 
 
 

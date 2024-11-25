@@ -9,8 +9,12 @@ import { UserOutlined } from '@ant-design/icons';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
 import { useSelector } from "react-redux";
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 const Layout=()=>{
   const mycart= useSelector(state=>state.mycart.cart);
+  const [smShow, setSmShow] = useState(false);
   const cartLen= mycart.length;
     return(
         <>
@@ -51,7 +55,30 @@ const Layout=()=>{
           <FontAwesomeIcon icon={faBarsStaggered} className='bars' />
           </Nav>
         <Nav.Link eventKey={2} as={Link} >
-            <UserOutlined id='user-icon' />
+        <UserOutlined onClick={() => setSmShow(true)}  id='user-icon' />
+        <Modal
+        size="sm"
+        show={smShow}
+        onHide={() => setSmShow(false)}
+        aria-labelledby="example-modal-sizes-title-sm"
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="example-modal-sizes-title-sm">
+            Login
+          </Modal.Title>
+        </Modal.Header>
+        
+        <Modal.Body id='modal-body'>
+          <Link to="/AdminLogin" style={{textDecoration:"none",color:"black"}}>
+           Admin Login <Button id='modal-btn' size="sm" >Click Here</Button>
+          </Link> <br />
+          <Link to="/AdminLogin" style={{textDecoration:"none",color:"black"}}>
+          Customer Login <Button  id='modal-btn'  size="sm" >Click Here</Button>
+          </Link>
+        </Modal.Body>
+      </Modal>
+
+            
             </Nav.Link>
             <Nav.Link eventKey={2} as={Link} to="cart" >
               <div style={{display:"flex"}}>

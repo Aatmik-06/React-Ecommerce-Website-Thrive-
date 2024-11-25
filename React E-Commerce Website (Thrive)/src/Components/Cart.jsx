@@ -10,15 +10,19 @@ import Link from "antd/es/typography/Link";
 import Marquee from "react-fast-marquee";
 import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons/faChevronRight";
 const Cart=()=>{
     const MyCart= useSelector(state=>state.mycart.cart);
     const dispatch=useDispatch();
     const navigate= useNavigate();
+   
+    const gotoshop=()=>{
+      navigate("/Shop")
+    }
     const gotoCheckout=(tamount)=>{
         navigate(`/Checkout/${tamount+100}`);
     }
- 
- 
      const qtyIncrement=(id)=>{
           dispatch(qntyInc({id:id}));
           scrollTo(1000)
@@ -30,11 +34,19 @@ const Cart=()=>{
  
      const removeItem=(id)=>{
         dispatch(itemRemove({id:id}))
+        document.getElementById("table-cont").style.display="none"
+        document.getElementById("empty-cart").style.display="block"
+        
      }
+
+    
+    
  
+   
      let totalAmount=0;
      const Data=MyCart.map((key)=>{
          totalAmount+=key.price*key.qnty;
+        
          return(
              <>
                 <tr>
@@ -56,20 +68,25 @@ const Cart=()=>{
                  <td>$ {key.price*key.qnty} </td>
                  <td>
                     <button onClick={()=>{removeItem(key.id)}} style={{backgroundColor:"transparent",border:"none",color:"red"}}> <FontAwesomeIcon icon={faTrash} /></button>
- 
                  </td>
                 </tr>
              
              </>
          )
      })
+     
+     
+  
      return(
          <>
-        
             <div id="cart-head" >
             <h1> My Cart</h1>
+            <div id="cart-header">
+            <p><FontAwesomeIcon icon={faHouse} id="icon"  /> &nbsp; Home&nbsp;&nbsp;<FontAwesomeIcon icon={faChevronRight} /> &nbsp; Cart </p>
             </div>
-            <Container>
+            </div>
+            
+            <Container id="table-cont">
             <Table id="table" bordered variant="Light" responsive>
        <thead >
          <tr>
@@ -108,6 +125,13 @@ const Cart=()=>{
             </div>
          </div>
          </Container>
+
+         <Container id="empty-cart">
+          <img src="src/assets/Images/empty-cart.png" alt="" /> <br /> <br />
+          <h4>Your Cart is empty</h4> <br />
+          <a href="#"> <button onClick={gotoshop}>Go To Shop</button> </a>
+         </Container>
+
          <Container style={{marginTop:"50px"}}>
          <div style={{ display: "flex" }}>
             {" "}
@@ -245,9 +269,11 @@ const Cart=()=>{
             </div>
             </Marquee>
             </Container>
- 
-            
          </>
      )
+
+
+    
+    
 }
 export default Cart;
