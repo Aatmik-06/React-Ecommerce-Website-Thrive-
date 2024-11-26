@@ -12,6 +12,7 @@ import Computers from "./Components/Computers";
 import Checkout from "./Components/Checkout";
 import ProductDetails from "./Components/ProductDetails";
 import PhonesShop from "./Components/PhonesShop";
+import PaymentDone from "./Components/PaymentDone";
 const App=()=>{
   return (
     <>
@@ -31,6 +32,7 @@ const App=()=>{
       <Route path="/Computers" element={<Computers/>}/>
       <Route  path="productdetail/:id" element={<ProductDetails/>}/>
       <Route path="/Checkout/:amt" element={<Checkout/>}/>
+      <Route path="paydone" element={<PaymentDone/>}/>
       </Route>
     </Routes>
     </BrowserRouter>

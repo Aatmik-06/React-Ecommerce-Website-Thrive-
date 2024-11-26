@@ -1,4 +1,18 @@
 {
+    "admin": [
+        {
+          "id": 1,
+          "name": "Aadi",
+          "adminid": "Aadi",
+          "password": "Aadi"
+        },
+        {
+          "id": 2,
+          "name": "Aatmik",
+          "adminid": "Aatmik",
+          "password": "Aatmik"
+        }
+      ],
     "shop":[
         {
             "id":1,

@@ -11,10 +11,41 @@ import { faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
 import { useSelector } from "react-redux";
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import Offcanvas from 'react-bootstrap/Offcanvas';
 const Layout=()=>{
   const mycart= useSelector(state=>state.mycart.cart);
-  const [smShow, setSmShow] = useState(false);
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const [adminid, setAdminid]=useState("");
+  const [password, setPassword]=useState("");
+
+  
+  const handleSubmit=()=>{
+    let api=`http://localhost:3000/admin/?adminid=${adminid}`;
+     axios.get(api).then((res)=>{
+         if (res.data.length>=1)
+         {
+             if (res.data[0].password==password)
+             {
+               navigate("/dashboard");
+             }
+             else 
+             {
+               alert("Invalid Password!")
+             }
+         }
+         else 
+         {
+           alert("Invalid AdminID")
+         }
+ 
+     })
+    }
+ 
+
   const cartLen= mycart.length;
     return(
         <>
@@ -55,28 +86,20 @@ const Layout=()=>{
           <FontAwesomeIcon icon={faBarsStaggered} className='bars' />
           </Nav>
         <Nav.Link eventKey={2} as={Link} >
-        <UserOutlined onClick={() => setSmShow(true)}  id='user-icon' />
-        <Modal
-        size="sm"
-        show={smShow}
-        onHide={() => setSmShow(false)}
-        aria-labelledby="example-modal-sizes-title-sm"
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id="example-modal-sizes-title-sm">
-            Login
-          </Modal.Title>
-        </Modal.Header>
-        
-        <Modal.Body id='modal-body'>
-          <Link to="/AdminLogin" style={{textDecoration:"none",color:"black"}}>
-           Admin Login <Button id='modal-btn' size="sm" >Click Here</Button>
-          </Link> <br />
-          <Link to="/AdminLogin" style={{textDecoration:"none",color:"black"}}>
-          Customer Login <Button  id='modal-btn'  size="sm" >Click Here</Button>
-          </Link>
-        </Modal.Body>
-      </Modal>
+        <UserOutlined onClick={handleShow}  id='user-icon' />
+        <Offcanvas show={show} onHide={handleClose} placement={"end"}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Login</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+        Enter Id : <input type="text" value={adminid} onChange={(e)=>{setAdminid(e.target.value)}} />
+        <br/>
+        Enter Password : <input type="password" value={password} onChange={(e)=>{setPassword(e.target.value)}}  />
+        <br/>
+        <button onClick={handleSubmit}>login</button>
+        </Offcanvas.Body>
+      </Offcanvas>
+       
 
             
             </Nav.Link>

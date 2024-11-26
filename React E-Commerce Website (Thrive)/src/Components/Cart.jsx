@@ -85,7 +85,6 @@ const Cart=()=>{
             <p><FontAwesomeIcon icon={faHouse} id="icon"  /> &nbsp; Home&nbsp;&nbsp;<FontAwesomeIcon icon={faChevronRight} /> &nbsp; Cart </p>
             </div>
             </div>
-            
             <Container id="table-cont">
             <Table id="table" bordered variant="Light" responsive>
        <thead >
@@ -120,7 +119,7 @@ const Cart=()=>{
                  </h5>
             </div>
             <br />
-            <button onClick={()=>{gotoCheckout(totalAmount)}}>Proceed To Order</button> 
+            <button onClick={()=>{gotoCheckout(totalAmount)}}>Proceed To Checkout</button> 
        
             </div>
          </div>

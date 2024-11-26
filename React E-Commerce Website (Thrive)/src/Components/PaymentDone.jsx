@@ -1,86 +1,34 @@
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import LoaderComp from "./Loader";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import Card from "react-bootstrap/Card";
-import { useState, useEffect } from "react";
+import Link from "antd/es/typography/Link";
 import Marquee from "react-fast-marquee";
-import { useDispatch } from "react-redux";
-import axios from "axios";
-import { addToCart } from './cartSlice';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import Card from "react-bootstrap/Card";
+const PaymentDone=()=>{
+    const [isLoader, setIsLoader]=useState(true);
 
 
-const Home = () => {
+    setTimeout(()=>{
+        setIsLoader(false);
+    }, 2000);
 
-  const [mydata, setMydata]= useState([]);
- const dispatch= useDispatch();
-
- const loadData=()=>{
-    let api="http://localhost:3000/shop/?type=new";
-    axios.get(api).then((res)=>{
-        setMydata(res.data);
-    })
- }
-
- useEffect(()=>{
-    loadData();
- }, []);
-
- const cartDataAdd=(id, name, price, categ, desc, myimg)=>{
-  dispatch(addToCart({id:id, name:name, price:price, category:categ, description:desc, image:myimg, qnty:1}))
- }
+    return(
+        <>
 
 
-const ans=mydata.map((key)=>{
-  return(
-   <>
-    <div style={{width:"19rem", marginTop:"10px",border:"none",background:"rgb(247,247,247)"}} id="c1" >
-      <button id="sb-1">Sale</button>
-      <img src={key.image} id="card-img" style={{width:"18rem"}} />
-      <h5> {key.name} </h5>
-        <span style={{fontWeight:'bold'}}>  ${key.price} </span> 
-        <button id="b1" style={{border:"none",color:"white"}}
-       onClick={()=>{cartDataAdd(key.id, key.name, key.price, key.category, key.description, key.image)}} >  <FontAwesomeIcon icon={faCartShopping} />&nbsp;  Add to cart</button>
-    </div> 
-   </>
-  )
-
-})
-
-
-  return (
-    <>
-      <div id="hero">
-        <Container id="hero-container" >
-      
-          <div id="hero-content">
+        {isLoader?(
+             <div style={{width:"100px", margin:"auto", paddingTop:"80px"}}>
+             <LoaderComp/>
+             </div>
+        ):(
             
-            <p style={{ display: "flex" }}>
-              <h1 style={{ color: "black", fontSize: "50px" }}>|</h1>
-              <span id="head-p">
-                {" "}
-                Best Ear <br />
-                Headphones{" "}
-              </span>
-            </p>
-            <h1 id="head-h1">
-              Music To <br /> <span id="typewriter"> Fill Your Heart </span>{" "}
-            </h1>
-            <Link to="/Shop">
-              {" "}
-              <button>
-                Shop Now <FontAwesomeIcon icon={faArrowRight} />
-              </button>{" "}
-            </Link>
-          </div>
-          <div id="hero-img">
-            <img src="src/assets/Images/slider-1.webp" alt="slider-img" />
-          </div>
-        </Container>
-      </div>
-      <Container style={{marginTop:"50px"}}>
-      <div style={{ display: "flex" }}>
+        <h2 align="center" style={{color:"green",marginTop:"80px"}}><FontAwesomeIcon style={{fontSize:"80px"}} icon={faCircleCheck} /> <br /> <br />Order Succesfully Placed <br/> <h4> Order will be Delivered within 6 to 7 days </h4> </h2>
+        )}
+        
+        <Container style={{marginTop:"100px"}}>
+         <div style={{ display: "flex" }}>
             {" "}
             <h2 style={{ color: "rgb(245, 9, 99)" }}> |</h2>{" "}
             <h2
@@ -91,11 +39,11 @@ const ans=mydata.map((key)=>{
                 marginLeft: "7px",
               }}
             >
-              New Arrivals
+              Shop More
             </h2>{" "}
-      </div>
-       
-      <Marquee pauseOnHover speed={"100"}> 
+          </div>
+        
+         <Marquee pauseOnHover speed={"100"}> 
             <div id="h2-cont" >
               <Link
                 to="/Shop"
@@ -215,38 +163,11 @@ const ans=mydata.map((key)=>{
               </Link>
             </div>
             </Marquee>
-        <hr style={{ color: "black" }} />
-        <div id="popular-products">
-          <div style={{ display: "flex" }}>
-            {" "}
-            <h2 style={{ color: "rgb(245, 9, 99)" }}> |</h2>{" "}
-            <h2
-              style={{
-                color: "black",
-                fontWeight: 600,
-                marginTop: "2px",
-                marginLeft: "7px",
-              }}
-            >
-              Popular Products
-            </h2>{" "}
-          </div>
-          <div id="popular-items">
-            {ans}
-
-          </div>
-
-        </div>
-          <div id="home-offers-foot">
-            <p>Apple iPhone 13 Pro</p>
-            <h1 >The wait is over : <br />iphone 13 pro max</h1> <br />
-            <p>Last call for up to <span style={{fontSize:"25px",fontWeight:"700"}}>32%</span> off!</p>
-            <Link to="/Shop"><button>Shop Now</button></Link>
-          </div>
+            </Container>
          
-      </Container>
-    </>
-  );
-};
-export default Home;
+          
+        </>
+    )
+}
 
+export default PaymentDone;

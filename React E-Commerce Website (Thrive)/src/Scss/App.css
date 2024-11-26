@@ -555,6 +555,36 @@ aside {
   display: flex;
 }
 
+#paybutton {
+  width: 60%;
+  border: none;
+  background-color: rgb(132, 147, 188);
+  padding: 10px 20px 10px 20px;
+  transition: all 0.2s;
+  color: white;
+  background-color: black;
+  font-size: 20px;
+}
+
+#paybutton:hover {
+  color: white;
+  background-color: rgb(245, 9, 99);
+}
+
+#checkout-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+Form {
+  width: 500px;
+}
+
+#payradio {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media screen and (max-width: 525px) {
   #cart-Total #cart-h5 {
     width: 220px;
