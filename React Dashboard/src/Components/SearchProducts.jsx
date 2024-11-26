@@ -17,7 +17,7 @@ const SearchProducts=()=>{
     const handleChange=(e)=>{
         let product= e.target.value;
         setempname(product);
-        let api=`http://localhost:3000/Products`;
+        let api=`http://localhost:3000/shop`;
         axios.get(api).then((res)=>{
             setMydata(res.data);
             console.log(res.data);

@@ -1,0 +1,81 @@
+{
+  "Products": [
+    {
+      "id": "b08d",
+      "productdesc": "Plane Blue Full Sleeves Shirt",
+      "category": "Men",
+      "size": "M,L,XL",
+      "brand": "Woodland",
+      "price": "500",
+      "stock": "200",
+      "orders": "150",
+      "sales": "$20000"
+    },
+    {
+      "id": "647f",
+      "productdesc": "Black Denim Jeans ",
+      "category": "Women",
+      "size": "M,L,XL",
+      "brand": "Woodland",
+      "price": "1000",
+      "stock": "1200",
+      "orders": "600",
+      "sales": "$40000"
+    },
+    {
+      "id": "82df",
+      "productdesc": "Red Formal Suits ",
+      "category": "Men",
+      "size": "M,L,XL",
+      "brand": "LUXE",
+      "price": "3000",
+      "stock": "300",
+      "orders": "100",
+      "sales": "$60000"
+    },
+    {
+      "id": "e13a",
+      "productdesc": "Black Woolen Hoodie",
+      "category": "Men",
+      "size": "M,L,XL",
+      "brand": "Woodland",
+      "price": "1500",
+      "stock": "500",
+      "orders": "400",
+      "sales": "$30000"
+    },
+    {
+      "id": "5b48",
+      "productdesc": "Formal Sweater",
+      "category": "Women",
+      "size": "M,L,XL",
+      "brand": "Woodland",
+      "price": "2000",
+      "stock": "500",
+      "orders": "200",
+      "sales": "$20000"
+    },
+    {
+      "id": "da6f",
+      "productdesc": "Black Women's Skirts",
+      "category": "Women",
+      "size": "M,L,XL",
+      "brand": "OGLUXE",
+      "price": "800",
+      "stock": "1500",
+      "orders": "500",
+      "sales": "$45000"
+    },
+    {
+      "id": "012a",
+      "productdesc": "Leather Belt",
+      "category": "Men",
+      "size": "M,L,XL",
+      "brand": "Woodland",
+      "price": "2000",
+      "stock": "500",
+      "orders": "100",
+      "sales": "$20000"
+    }
+  ]
+}

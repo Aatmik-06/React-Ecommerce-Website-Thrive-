@@ -12,9 +12,13 @@ import { useSelector } from "react-redux";
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 const Layout=()=>{
   const mycart= useSelector(state=>state.mycart.cart);
   const [show, setShow] = useState(false);
+
+  const navigate= useNavigate();
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -30,7 +34,7 @@ const Layout=()=>{
          {
              if (res.data[0].password==password)
              {
-               navigate("/dashboard");
+              <a href="http://localhost:5174"></a>
              }
              else 
              {
@@ -96,7 +100,9 @@ const Layout=()=>{
         <br/>
         Enter Password : <input type="password" value={password} onChange={(e)=>{setPassword(e.target.value)}}  />
         <br/>
-        <button onClick={handleSubmit}>login</button>
+       <Link  to="http://localhost:5174"
+    target="_blank"
+    rel="noopener noreferrer"> <button  href="http://localhost:5174">login</button> </Link>
         </Offcanvas.Body>
       </Offcanvas>
        

@@ -84,7 +84,7 @@ if (key.price>=lowPrice && key.price<=highPrice)
             <p><FontAwesomeIcon icon={faHouse} id="icon"  /> &nbsp; Home&nbsp;&nbsp;<FontAwesomeIcon icon={faChevronRight} /> &nbsp; Shop </p>
           </div>
           <div id="shop-cont">
-        <aside>
+        <aside id="asideshop">
           <div id="aside">
           {/* <div id="aside-items-1">  */}
           <Link style={{textDecoration:"none"}}  to="/Shop">  <p id="shop-side-items"> All Categories <FontAwesomeIcon icon={faChevronRight} style={{marginTop:"5px"}}/> </p>  </Link>                          

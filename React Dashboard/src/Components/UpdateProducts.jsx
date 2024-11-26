@@ -16,7 +16,7 @@ const UpdateProducts=()=>{
     const {myid} =useParams();
     const [mydata, setMydata]=useState({});
     const loadData=()=>{
-      let api=`http://localhost:3000/Products/${myid}`;
+      let api=`http://localhost:3000/shop/${myid}`;
       axios.get(api).then((res)=>{
         console.log(res.data);
         setMydata(res.data);
@@ -33,7 +33,7 @@ const UpdateProducts=()=>{
     }
    const handleSubmit=(e)=>{ 
       e.preventDefault();
-    let api=`http://localhost:3000/Products/${myid}`;
+    let api=`http://localhost:3000/shop/${myid}`;
     axios.put(api, mydata).then((res)=>{
         message.success("Data succesfully updated!!!");
         setMydata({

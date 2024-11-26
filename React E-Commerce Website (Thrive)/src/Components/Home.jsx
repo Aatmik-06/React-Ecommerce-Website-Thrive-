@@ -57,7 +57,7 @@ const ans=mydata.map((key)=>{
           <div id="hero-content">
             
             <p style={{ display: "flex" }}>
-              <h1 style={{ color: "black", fontSize: "50px" }}>|</h1>
+              <h1  id="h1-homecontent">|</h1>
               <span id="head-p">
                 {" "}
                 Best Ear <br />

@@ -132,7 +132,7 @@ const Checkout = () => {
                     
                     onChange={handleInput}
                   />{" "}
-                  UPI/Gpay <br />
+                  UPI/BHIM UPI <br />
                 </div>
                 <div>{ans1}</div>
                 </div>

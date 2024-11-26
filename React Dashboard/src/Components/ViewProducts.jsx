@@ -16,7 +16,7 @@ const ViewProducts=()=>{
   const [mydata, setMydata]=useState([]);
   const navigate= useNavigate();
   const loadData=()=>{
-     let api="http://localhost:3000/Products";
+     let api="http://localhost:3000/shop";
      axios.get(api).then((res)=>{
          console.log(res.data);
          setMydata(res.data);
@@ -27,7 +27,7 @@ const ViewProducts=()=>{
   }, []);
  
  const myRecDel=(id)=>{
-     let api=`http://localhost:3000/Products/${id}`
+     let api=`http://localhost:3000/shop/${id}`
      axios.delete(api).then((res)=>{
           message.error("Your record Succesfully deleted!!!");
          loadData();
