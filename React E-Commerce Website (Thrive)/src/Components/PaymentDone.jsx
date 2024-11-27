@@ -12,7 +12,7 @@ const PaymentDone=()=>{
 
     setTimeout(()=>{
         setIsLoader(false);
-    }, 2000);
+    }, 3000);
 
     return(
         <>

@@ -53,7 +53,7 @@ const Shop=()=>{
                 <button id="b1" style={{border:"none",color:"white"}}
                onClick={()=>{cartDataAdd(key.id, key.name, key.price, key.category, key.description, key.image)}} >  <FontAwesomeIcon icon={faCartShopping} />&nbsp;  Add to cart</button>
             </div> 
-          
+
            </>
           )
           

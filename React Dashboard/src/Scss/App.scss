@@ -4,18 +4,33 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(/src/images/Main-BG.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) ;
+    background-size: 300% 300%;
+    animation: gradient 10s ease infinite;
+    // background-image: url(/src/images/Main-BG.png);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    min-height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 #das-img{
     img{
         height: 60px;
+        margin-right: 20px;
     }
 }
 #logo{
-    padding-left: 10px;
+    padding-left: 20px;
     display: flex;
     transition: all 0.2s;
 }

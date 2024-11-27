@@ -41,14 +41,12 @@ const ViewProducts=()=>{
   return(
     <>
       <tr>
-        <td> {key.productdesc} </td>
+        <td> <img src={key.image} id="card-img" style={{width:"5rem"}} /> </td>
+        <td> {key.name} </td>
         <td> {key.category} </td>
-        <td> {key.size} </td>
-        <td> {key.brand} </td>
+        <td> {key.description} </td>
+        <td> {key.type} </td>
         <td> {key.price} </td>
-        <td> {key.stock} </td>
-        <td> {key.orders} </td>
-        <td> {key.sales} </td>
         <td>
             <a href="#" onClick={()=>{myEdit(key.id)}}>
               <FontAwesomeIcon icon={faPenToSquare} />
@@ -59,7 +57,7 @@ const ViewProducts=()=>{
         </td>
 
       </tr>
-    
+      
     </>
   )
 })
@@ -85,14 +83,12 @@ const ViewProducts=()=>{
     <Table responsive="sm" id="table" striped bordered hover variant="dark" >
         <thead>
           <tr>
-            <th>Product description</th>
+            <th>Product Image</th>
+            <th>Product </th>
             <th>Category</th>
-            <th>Size</th>
-            <th>Brand</th>
+            <th>Description</th>
+            <th>Stock Type</th>
             <th>Price</th>
-            <th>Stock</th>
-            <th>Orders</th>
-            <th>Sales</th>
             <th>Action</th>
           </tr>
         </thead>

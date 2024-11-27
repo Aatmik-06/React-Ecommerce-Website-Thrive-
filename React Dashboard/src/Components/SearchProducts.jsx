@@ -32,7 +32,7 @@ const SearchProducts=()=>{
           return(
             <>
              <tr>
-             <td> {key.productdesc} </td>
+             <td> {key.img} </td>
              <td> {key.category} </td>
              <td> {key.size} </td>
              <td> {key.brand} </td>

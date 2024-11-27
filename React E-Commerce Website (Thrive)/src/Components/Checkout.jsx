@@ -10,7 +10,17 @@ import Upi from "./Upi";
 import Card from "./Card";
 import Cod from "./Cod";
 import NetBanking from "./NetBanking";
+import axios from "axios";
 const Checkout = () => {
+
+
+  const [input, setinput] = useState({});
+  const handleInputorders = (e) => {
+    let name = e.target.name;
+    let value = e.target.value;
+    setinput((values) => ({ ...values, [name]: value }));
+    console.log(input);
+  };
   const { amt } = useParams();
   const [paymethod, setPayMethod] = useState("");
   const navigate = useNavigate();
@@ -40,6 +50,11 @@ const Checkout = () => {
   }
 
   const paydone = () => {
+    
+    let api = "http://localhost:3000/orders";
+    axios.post(api, input).then((res) => {
+      console.log(res);
+    });
     navigate("/paydone");
   };
   return (
@@ -58,29 +73,35 @@ const Checkout = () => {
           <div id="cusform">
             <h3 style={{textAlign:"center"}}>Add Shipping Details</h3>
             <Form>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Group className="mb-3" id="Form" controlId="formBasicEmail">
                 <Form.Label>Full Name</Form.Label>
-                <Form.Control type="text" />
+                <Form.Control type="text" onChange={handleInputorders}
+                  name="name" />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Group className="mb-3" id="Form" controlId="formBasicEmail">
                 <Form.Label>Town/City</Form.Label>
-                <Form.Control type="text" />
+                <Form.Control type="text" onChange={handleInputorders}
+                  name="city" />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Group className="mb-3" id="Form" controlId="formBasicEmail">
                 <Form.Label>Address</Form.Label>
-                <Form.Control type="text" />
+                <Form.Control type="text" onChange={handleInputorders}
+                  name="address" />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Group className="mb-3" id="Form" controlId="formBasicEmail">
                 <Form.Label>Pin Code</Form.Label>
-                <Form.Control type="text" />
+                <Form.Control type="text" onChange={handleInputorders}
+                  name="pincode" />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Group className="mb-3" id="Form" controlId="formBasicEmail">
                 <Form.Label>Phone Number</Form.Label>
-                <Form.Control type="text" />
+                <Form.Control type="text" onChange={handleInputorders}
+                  name="number"/>
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Group className="mb-3" id="Form" controlId="formBasicEmail">
                 <Form.Label>Email</Form.Label>
-                <Form.Control type="email" />
+                <Form.Control type="email" onChange={handleInputorders}
+                  name="email" />
               </Form.Group>
             </Form>
           </div>

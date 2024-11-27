@@ -20,8 +20,14 @@ const Cart=()=>{
     const gotoshop=()=>{
       navigate("/Shop")
     }
+
     const gotoCheckout=(tamount)=>{
         navigate(`/Checkout/${tamount+100}`);
+        let api = "http://localhost:3000/orders";
+        axios.post(api, input).then((res) => {
+          console.log(res);
+          message.success("Product Successfully Added!!!");
+        });
     }
      const qtyIncrement=(id)=>{
           dispatch(qntyInc({id:id}));

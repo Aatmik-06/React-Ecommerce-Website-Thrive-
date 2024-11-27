@@ -33,7 +33,7 @@ const toggleShow = () => setShow((s) => !s);
         <img src={logo} alt="logo" />
      </div>
          <div id="das">
-         <h2>Products <br /> <h5> Dashboard</h5> </h2>
+         <h2>Admin <br /> <h5> Dashboard</h5> </h2>
          
          </div>
         </Navbar.Brand>   
@@ -44,19 +44,19 @@ const toggleShow = () => setShow((s) => !s);
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text id="signedin">
-              Signed in as : <a href="#login"  >Aatmik Kushwaha</a>
+              Signed in as : <a href="#login"  >Aatmik </a>
             </Navbar.Text>
           </Navbar.Collapse>
         </Container>
       </Navbar>
       
-
-
-
       <aside id="side-main">
         <Nav defaultActiveKey="/home" className="flex-column" id="sidebar">
           <Nav.Link id="sideitems" as={Link} to="/home">
           <FontAwesomeIcon icon={faHouse} /> Dashboard
+          </Nav.Link>
+          <Nav.Link id="sideitems" as={Link} to="/viewOrders">
+          <FontAwesomeIcon icon={faBookOpen} /> View Orders
           </Nav.Link>
           <Nav.Link id="sideitems" as={Link} to="/viewproducts">
           <FontAwesomeIcon icon={faBookOpen} /> View Products

@@ -10,18 +10,22 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
 import { useSelector } from "react-redux";
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Offcanvas from 'react-bootstrap/Offcanvas';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import Modal from 'react-bootstrap/Modal';
+import Dropdown from 'react-bootstrap/Dropdown';
 const Layout=()=>{
   const mycart= useSelector(state=>state.mycart.cart);
-  const [show, setShow] = useState(false);
 
-  const navigate= useNavigate();
+  const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const navigate= useNavigate();
+
 
   const [adminid, setAdminid]=useState("");
   const [password, setPassword]=useState("");
@@ -34,7 +38,7 @@ const Layout=()=>{
          {
              if (res.data[0].password==password)
              {
-              <a href="http://localhost:5174"></a>
+              window.location.href = 'http://localhost:5174';
              }
              else 
              {
@@ -90,24 +94,62 @@ const Layout=()=>{
           <FontAwesomeIcon icon={faBarsStaggered} className='bars' />
           </Nav>
         <Nav.Link eventKey={2} as={Link} >
-        <UserOutlined onClick={handleShow}  id='user-icon' />
-        <Offcanvas show={show} onHide={handleClose} placement={"end"}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Login</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-        Enter Id : <input type="text" value={adminid} onChange={(e)=>{setAdminid(e.target.value)}} />
-        <br/>
-        Enter Password : <input type="password" value={password} onChange={(e)=>{setPassword(e.target.value)}}  />
-        <br/>
-       <Link  to="http://localhost:5174"
-    target="_blank"
-    rel="noopener noreferrer"> <button  href="http://localhost:5174">login</button> </Link>
-        </Offcanvas.Body>
-      </Offcanvas>
-       
+        <Dropdown variant="dark">
+      <Dropdown.Toggle style={{backgroundColor:"transparent",border:"none"}}  >
+         <UserOutlined   id='user-icon' />
+      </Dropdown.Toggle>
+      <Dropdown.Menu variant="dark">
+        <Dropdown.Item variant="dark"> <Button variant="dark"  onClick={handleShow} style={{width:"100%",border:"none",backgroundColor:"transparent"}}>
+        Admin Login
+      </Button></Dropdown.Item >
+      <Dropdown.Item variant="dark"> <Button variant="dark"  style={{width:"100%",border:"none",backgroundColor:"transparent"}}>
+        User Login
+      </Button></Dropdown.Item>
+        
+      </Dropdown.Menu>
+    </Dropdown>
 
-            
+
+    <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Admin Login</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Admin Id</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter Admin Id"
+                value={adminid} onChange={(e)=>{setAdminid(e.target.value)}} 
+                autoFocus
+              />
+
+               
+            </Form.Group>
+            <Form.Group className="mb-3" >
+            <Form.Label>Admin Password</Form.Label>
+              <Form.Control
+                type="password"
+                placeholder="Enter Admin Password"
+                value={password} onChange={(e)=>{setPassword(e.target.value)}} 
+                autoFocus
+              />   
+               </Form.Group>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+      
+      
+         <Button style={{backgroundColor:"rgb(245, 9, 99)",border:"none"}} onClick={handleSubmit}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+                   
             </Nav.Link>
             <Nav.Link eventKey={2} as={Link} to="cart" >
               <div style={{display:"flex"}}>

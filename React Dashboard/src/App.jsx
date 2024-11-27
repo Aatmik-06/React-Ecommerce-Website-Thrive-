@@ -6,6 +6,7 @@ import AddProducts from "./Components/AddProducts";
 import UpdateProducts from "./Components/UpdateProducts";
 import SearchProducts from "./Components/SearchProducts";
 import Login from "./Components/Login";
+import ViewOrders from "./Components/ViewOrders";
 // import { message } from 'antd';
  const App=()=>{
   return (
@@ -20,6 +21,7 @@ import Login from "./Components/Login";
         <Route path="UpdateProducts" element={<UpdateProducts/>} />
         <Route path="SearchProducts" element={<SearchProducts/>} />
         <Route path="editrec/:myid" element={<UpdateProducts/>} />
+        <Route path="ViewOrders" element={<ViewOrders/>} />
         <Route path="login" element={<Login/>} />
       </Route>
     </Routes>

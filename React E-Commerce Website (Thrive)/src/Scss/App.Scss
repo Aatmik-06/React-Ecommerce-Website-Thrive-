@@ -566,7 +566,7 @@ margin-top: 50px;
     display: flex;
     justify-content: space-between;
 }
-Form{
+#Form{
     width: 500px;
 }
 #payradio{
@@ -649,6 +649,9 @@ Form{
 
 
 @media screen and (max-width: 525px) {
+    #footer-services{
+        margin-left: 70px;
+    }
     #hero-content{
         margin-top: 20px;
         button{
@@ -763,6 +766,8 @@ Form{
     }
 }
 @media screen and (max-width: 426px) {
+   
+    
     #popular-items{
         display: grid;
         grid-template-columns: 1fr  ;
@@ -778,7 +783,10 @@ Form{
         margin-left: 50px;
     }
 }
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 376px) {
+    #footer-services{
+        margin-left: 50px;
+    }
     #popular-items{
         display: grid;
         grid-template-columns: 1fr  ;
@@ -794,7 +802,10 @@ Form{
         margin-left: 20px;
     }
 }
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 320px) {
+    #footer-services{
+        margin-left: 25px;
+    }
     #popular-items{
         display: grid;
         grid-template-columns: 1fr  ;
