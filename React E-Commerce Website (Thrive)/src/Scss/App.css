@@ -600,7 +600,6 @@
     flex-wrap: wrap-reverse;
   }
   #asideshop {
-    display: flex;
     flex-wrap: wrap;
   }
   #aside-d3 {
