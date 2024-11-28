@@ -641,6 +641,25 @@
   }
 }
 @media screen and (max-width: 525px) {
+  #home-offers-foot {
+    padding: 20px 38px 40px 20px;
+  }
+  #home-offers-foot h1 {
+    font-size: 28px;
+  }
+  #home-offers-foot P {
+    font-size: 15px;
+  }
+  #home-offers-foot span {
+    color: white;
+  }
+  #home-offers-foot button {
+    background-color: white;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    font-size: 12px;
+    transition: all 0.2s linear;
+  }
   #footer-services {
     margin-left: 70px;
   }
@@ -769,7 +788,7 @@
 }
 @media screen and (max-width: 376px) {
   #footer-services {
-    margin-left: 50px;
+    margin-left: 40px;
   }
   #popular-items {
     display: grid;
