@@ -16,6 +16,10 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import Dropdown from 'react-bootstrap/Dropdown';
 import logo from '../assets/Images/logo.png'
+import truck from '../assets/Images/g-truck.png';
+import credit from '../assets/Images/g-credit.png';
+import safety from '../assets/Images/g-safety.png';
+import tele from '../assets/Images/g-tele.png';
 const Layout=()=>{
   const mycart= useSelector(state=>state.mycart.cart);
 
@@ -161,22 +165,22 @@ const Layout=()=>{
         <Container>
         <div id="footer-services">
           <div id='services-c1'>
-            <img src="src/assets/Images/g-truck.png" alt="" />
+            <img src={truck} alt="" />
             <h5>Worldwide Delivery</h5>
             <p> With sites in 5 languages, we ship to over 200 countries & regions.</p>
           </div>
           <div id='services-c1'>
-            <img src="src/assets/Images/g-credit.png" alt="" />
+            <img src={credit} alt="" />
             <h5>Safe Payment</h5>
             <p> Pay with the world’s most popular and secure payment methods.</p>
           </div>
           <div id='services-c1'>
-            <img src="src/assets/Images/g-safety.png" alt="" />
+            <img src={safety} alt="" />
             <h5>Shop with Confidence</h5>
             <p>Our Buyer Protection covers your purchase from click to delivery.</p>
           </div>
           <div id='services-c1'>
-            <img src="src/assets/Images/g-tele.png" alt="" />
+            <img src={tele} alt="" />
             <h5>24/7 Help Center</h5>
             <p> Round-the-clock assistance for a smooth shopping experience.</p>
           </div>

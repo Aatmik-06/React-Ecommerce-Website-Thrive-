@@ -9,6 +9,12 @@ import { useDispatch } from "react-redux";
 import axios from "axios";
 import { addToCart } from './cartSlice';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import laptop from '../assets/Images/laptop.webp';
+import ipad from '../assets/Images/product-cat-1.png';
+import watch from "../assets/Images/product-cat-3.webp";
+import virtual from "../assets/Images/product-cat-2.webp";
+import bluetooth from "../assets/Images/product-cat-7.webp";
+import hero from "../assets/Images/slider-1.webp"
 
 
 const Home = () => {
@@ -75,7 +81,7 @@ const ans=mydata.map((key)=>{
             </Link>
           </div>
           <div id="hero-img">
-            <img src="src/assets/Images/slider-1.webp" alt="slider-img" />
+            <img src={hero} alt="slider-img" />
           </div>
         </Container>
       </div>
@@ -109,7 +115,7 @@ const ans=mydata.map((key)=>{
                 <Card style={{ width: "18rem" , marginLeft:"30px"}} id="home-card1"  >
                   <Card.Img
                     variant="top"
-                    src="src/assets/Images/laptop.webp" style={{backgroundColor:"rgb(239,243,237)",paddingBottom:"11.5px"}}
+                    src={laptop} style={{backgroundColor:"rgb(239,243,237)",paddingBottom:"11.5px"}}
                   />
                   <Card.Body>
                     <Card.Title
@@ -132,7 +138,7 @@ const ans=mydata.map((key)=>{
                 <Card style={{ width: "18rem", marginLeft:"30px" }} id="home-card1">
                   <Card.Img
                     variant="top"
-                    src="src/assets/Images/product-cat-1.png"style={{backgroundColor:"RGB(119 167 215)",paddingBottom:"2px"}}
+                    src={ipad} style={{backgroundColor:"RGB(119 167 215)",paddingBottom:"2px"}}
                   />
                   <Card.Body>
                     <Card.Title
@@ -155,7 +161,7 @@ const ans=mydata.map((key)=>{
                 <Card style={{ width: "18rem" , marginLeft:"30px"}} id="home-card1">
                   <Card.Img
                     variant="top"
-                    src="src/assets/Images/product-cat-3.webp" style={{backgroundColor:"rgb(223,243,216)",paddingBottom:"49px"}}
+                    src={watch} style={{backgroundColor:"rgb(223,243,216)",paddingBottom:"49px"}}
                   />
                   <Card.Body>
                     <Card.Title
@@ -178,7 +184,7 @@ const ans=mydata.map((key)=>{
                 <Card style={{ width: "18rem" , marginLeft:"30px"}} id="home-card1" >
                   <Card.Img
                     variant="top"
-                    src="src/assets/Images/product-cat-2.webp" style={{backgroundColor:"RGB(239 205 244)"}}
+                    src={virtual} style={{backgroundColor:"RGB(239 205 244)"}}
                   />
                   <Card.Body>
                     <Card.Title
@@ -202,7 +208,7 @@ const ans=mydata.map((key)=>{
                 <Card style={{ width: "18rem", marginLeft:"30px" }} id="home-card1">
                   <Card.Img
                     variant="top"    
-                    src="src/assets/Images/product-cat-7.webp" style={{backgroundColor:"RGB(130 148 165)"}}
+                    src={bluetooth} style={{backgroundColor:"RGB(130 148 165)"}}
                   />
                   <Card.Body>
                     <Card.Title
