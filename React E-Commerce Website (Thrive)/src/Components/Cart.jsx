@@ -117,13 +117,13 @@ const Cart=()=>{
             <div id="cart-h5">
                 <h5>
                  SubTotal      <br /> 
-                 Includes all Tax (+$100)    <br /> <hr />
+                 Includes all Tax     <br /> <hr />
                  Total    <br />
                  </h5>
                  <h5>
                 : ${totalAmount} <br /> 
-                : ${totalAmount+100} <br /> <hr />
-                : ${totalAmount+100} <br />
+                : ${totalAmount} <br /> <hr />
+                : ${totalAmount} <br />
                  </h5>
             </div>
             <br />
