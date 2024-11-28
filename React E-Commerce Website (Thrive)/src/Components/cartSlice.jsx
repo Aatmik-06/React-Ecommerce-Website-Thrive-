@@ -11,12 +11,12 @@ const cartSlice= createSlice({
             const myData= state.cart.filter(key=>key.id==actions.payload.id);
             if (myData.length>=1)
             {
-                message.error("This product Aleready Added!")
+                message.error("Already Added")
             }
             else 
             {
                 state.cart.push(actions.payload);
-                message.success("Product Added!");
+                message.success("Product Added");
             }
         },
 
@@ -42,7 +42,7 @@ const cartSlice= createSlice({
                     }
                     else 
                     {
-                        message.error("Quantity not less than 1 ")
+                        message.error("Quantity must be greater than 1  ")
                     }
                 }
             }
@@ -51,7 +51,9 @@ const cartSlice= createSlice({
         
         itemRemove:(state, actions)=>{
             state.cart= state.cart.filter(key=>key.id!=actions.payload.id)
-        }
+        },
+        
+       
     }
 })
 export const {addToCart, qntyInc, qntyDec, itemRemove} = cartSlice.actions;

@@ -75,7 +75,7 @@ margin-right: 50px;
 }
 #user-icon{
     font-size: 25px;
-    margin-right: 15px;
+    margin-right: 0px;
     color: black;
 }
 #cart-icon{
@@ -609,9 +609,23 @@ margin-top: 50px;
 
 
 
-
+@media screen and (max-width: 1024px) {
+    #shop-items{
+     grid-template-columns: 1fr 1fr;
+    }
+}
 
 @media screen and (max-width: 768px) {
+    #shop-cont{
+        flex-wrap: wrap-reverse;
+    }
+    #asideshop{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #aside-d3{
+        display: none;
+    }
     #search{
         margin-right: 10px;
     }
@@ -803,6 +817,9 @@ margin-top: 50px;
     }
 }
 @media screen and (max-width: 320px) {
+    #logo {
+        margin-right: 0px;
+    }
     #footer-services{
         margin-left: 25px;
     }

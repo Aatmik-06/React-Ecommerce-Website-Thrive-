@@ -12,6 +12,7 @@ import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons/faChevronRight";
+import { message } from "antd";
 const Cart=()=>{
     const MyCart= useSelector(state=>state.mycart.cart);
     const dispatch=useDispatch();
@@ -22,7 +23,12 @@ const Cart=()=>{
     }
 
     const gotoCheckout=(tamount)=>{
+      if(tamount<100){
+        message.error("Cart is Empty")
+        
+      }else{
         navigate(`/Checkout/${tamount+100}`);
+      }
         let api = "http://localhost:3000/orders";
         axios.post(api, input).then((res) => {
           console.log(res);
@@ -37,22 +43,15 @@ const Cart=()=>{
      const qtyDecrement=(id)=>{
           dispatch(qntyDec({id:id}))
      }
- 
+
+     let totalAmount=0;
      const removeItem=(id)=>{
-        dispatch(itemRemove({id:id}))
-        document.getElementById("table-cont").style.display="none"
-        document.getElementById("empty-cart").style.display="block"
-        
+        dispatch(itemRemove({id:id}))    
      }
 
-    
-    
- 
-   
-     let totalAmount=0;
+
      const Data=MyCart.map((key)=>{
          totalAmount+=key.price*key.qnty;
-        
          return(
              <>
                 <tr>
@@ -76,13 +75,10 @@ const Cart=()=>{
                     <button onClick={()=>{removeItem(key.id)}} style={{backgroundColor:"transparent",border:"none",color:"red"}}> <FontAwesomeIcon icon={faTrash} /></button>
                  </td>
                 </tr>
-             
              </>
          )
-     })
-     
-     
-  
+        
+     })  
      return(
          <>
             <div id="cart-head" >
@@ -130,13 +126,12 @@ const Cart=()=>{
             </div>
          </div>
          </Container>
-
-         <Container id="empty-cart">
+         {/* <Container id="empty-cart">
           <img src="src/assets/Images/empty-cart.png" alt="" /> <br /> <br />
           <h4>Your Cart is empty</h4> <br />
           <a href="#"> <button onClick={gotoshop}>Go To Shop</button> </a>
-         </Container>
-
+         </Container>   */}
+        
          <Container style={{marginTop:"50px"}}>
          <div style={{ display: "flex" }}>
             {" "}

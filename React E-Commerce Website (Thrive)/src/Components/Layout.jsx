@@ -2,8 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link,Outlet } from 'react-router-dom';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons/faMagnifyingGlass';
+import { Link,Outlet } from 'react-router-dom';          
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { UserOutlined } from '@ant-design/icons';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
@@ -16,6 +15,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import Dropdown from 'react-bootstrap/Dropdown';
+import logo from '../assets/Images/logo.png'
 const Layout=()=>{
   const mycart= useSelector(state=>state.mycart.cart);
 
@@ -52,8 +52,6 @@ const Layout=()=>{
  
      })
     }
- 
-
   const cartLen= mycart.length;
     return(
         <>
@@ -62,7 +60,7 @@ const Layout=()=>{
           <Navbar.Brand as={Link} to="/Home" id='logo' >
             <img
               alt=""
-              src="src/assets/logo.png"
+              src={logo}
               width="45"
               height="45"
               className="d-inline-block align-top"
@@ -95,7 +93,7 @@ const Layout=()=>{
           </Nav>
         <Nav.Link eventKey={2} as={Link} >
         <Dropdown variant="dark">
-      <Dropdown.Toggle style={{backgroundColor:"transparent",border:"none"}}  >
+      <Dropdown.Toggle style={{backgroundColor:"transparent",border:"none",color:"transparent",width:"50px"}}  >
          <UserOutlined   id='user-icon' />
       </Dropdown.Toggle>
       <Dropdown.Menu variant="dark">
@@ -205,3 +203,6 @@ const Layout=()=>{
     )
 }
 export default Layout;
+
+
+

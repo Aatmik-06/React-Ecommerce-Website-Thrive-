@@ -50,9 +50,8 @@ body {
   font-size: 21px;
 }
 #sidebar #sideitems:hover, #sidebar-ham #sideitems:hover {
-  color: rgb(129, 162, 229);
   font-size: 22px;
-  background-color: rgb(19, 43, 83);
+  background-color: rgba(0, 0, 0, 0.533);
   border-radius: 8px;
 }
 
