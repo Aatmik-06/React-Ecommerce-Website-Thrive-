@@ -13,6 +13,12 @@ import { useNavigate } from "react-router-dom";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons/faChevronRight";
 import { message } from "antd";
+import laptop from '../assets/Images/laptop.webp';
+import ipad from '../assets/Images/product-cat-1.png';
+import watch from "../assets/Images/product-cat-3.webp";
+import virtual from "../assets/Images/product-cat-2.webp";
+import bluetooth from "../assets/Images/product-cat-7.webp";
+import hero from "../assets/Images/slider-1.webp"
 const Cart=()=>{
     const MyCart= useSelector(state=>state.mycart.cart);
     const dispatch=useDispatch();
@@ -148,10 +154,11 @@ const Cart=()=>{
             </h2>{" "}
           </div>
         
-         <Marquee pauseOnHover speed={"100"}> 
+           
+      <Marquee pauseOnHover speed={"100"}> 
             <div id="h2-cont" >
               <Link
-                to="/Shop"
+                to="/shop"
                 style={{
                   fontSize: "17px",
                   color: "rgb(82, 82, 88)",
@@ -162,7 +169,7 @@ const Cart=()=>{
                 <Card style={{ width: "18rem" , marginLeft:"30px"}} id="home-card1"  >
                   <Card.Img
                     variant="top"
-                    src="src/assets/Images/laptop.webp" style={{backgroundColor:"rgb(239,243,237)",paddingBottom:"11.5px"}}
+                    src={laptop} style={{backgroundColor:"rgb(239,243,237)",paddingBottom:"11.5px"}}
                   />
                   <Card.Body>
                     <Card.Title
@@ -185,7 +192,7 @@ const Cart=()=>{
                 <Card style={{ width: "18rem", marginLeft:"30px" }} id="home-card1">
                   <Card.Img
                     variant="top"
-                    src="src/assets/Images/product-cat-1.png"style={{backgroundColor:"RGB(119 167 215)",paddingBottom:"2px"}}
+                    src={ipad} style={{backgroundColor:"RGB(119 167 215)",paddingBottom:"2px"}}
                   />
                   <Card.Body>
                     <Card.Title
@@ -208,7 +215,7 @@ const Cart=()=>{
                 <Card style={{ width: "18rem" , marginLeft:"30px"}} id="home-card1">
                   <Card.Img
                     variant="top"
-                    src="src/assets/Images/product-cat-3.webp" style={{backgroundColor:"rgb(223,243,216)",paddingBottom:"49px"}}
+                    src={watch} style={{backgroundColor:"rgb(223,243,216)",paddingBottom:"49px"}}
                   />
                   <Card.Body>
                     <Card.Title
@@ -231,7 +238,7 @@ const Cart=()=>{
                 <Card style={{ width: "18rem" , marginLeft:"30px"}} id="home-card1" >
                   <Card.Img
                     variant="top"
-                    src="src/assets/Images/product-cat-2.webp" style={{backgroundColor:"RGB(239 205 244)"}}
+                    src={virtual} style={{backgroundColor:"RGB(239 205 244)"}}
                   />
                   <Card.Body>
                     <Card.Title
@@ -255,7 +262,7 @@ const Cart=()=>{
                 <Card style={{ width: "18rem", marginLeft:"30px" }} id="home-card1">
                   <Card.Img
                     variant="top"    
-                    src="src/assets/Images/product-cat-7.webp" style={{backgroundColor:"RGB(130 148 165)"}}
+                    src={bluetooth} style={{backgroundColor:"RGB(130 148 165)"}}
                   />
                   <Card.Body>
                     <Card.Title

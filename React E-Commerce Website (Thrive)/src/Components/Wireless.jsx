@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import { useDispatch } from 'react-redux';
 import { addToCart } from './cartSlice';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
@@ -10,6 +8,8 @@ import { Container } from "react-bootstrap";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons/faChevronRight";
 import { Link } from "react-router-dom";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import phonebanner1 from "../assets/Images/o-banner3.jpg";
+import shopbanner from "../assets/Images/shop-banner.jpg"
 const Wireless =()=>{
     const [mydata, setMydata]= useState([]);
     const dispatch= useDispatch();
@@ -110,7 +110,7 @@ if (key.price>=lowPrice && key.price<=highPrice)
 
           <br /><br /> <br /> <br />
           
-        <Link to="/PhonesShop">  <img src="src/assets/Images/o-banner3.jpg" alt="" id="aside-img" style={{height:"100%",width:"100%"}} /></Link>
+        <Link to="/PhonesShop">  <img src={phonebanner1} alt="" id="aside-img" style={{height:"100%",width:"100%"}} /></Link>
         </div>
         <div id="aside-d3">
            <div id="aside-d3-img">
@@ -127,7 +127,7 @@ if (key.price>=lowPrice && key.price<=highPrice)
         </aside>
         <div id="shop-main">
           <div id="shop-head">
-          <Link to="/Shop"> <img src="src/assets/Images/shop-banner.jpg" alt="" /> </Link>
+          <Link to="/Shop"> <img src={shopbanner} alt="" /> </Link>
          <div id="items-result"><h6><span style={{color:"rgb(120, 120, 120)",textAlign:"left"}}> Showing 1–15 of 20 results </span></h6></div>
           </div>
             <div id="shop-items">
