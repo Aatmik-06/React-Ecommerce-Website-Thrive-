@@ -118,7 +118,7 @@ const Cart=()=>{
                 <h5>
                  SubTotal      <br /> 
                  Includes all Tax     <br /> <hr />
-                 Total    <br />
+                 Total<br />
                  </h5>
                  <h5>
                 : ${totalAmount} <br /> 
