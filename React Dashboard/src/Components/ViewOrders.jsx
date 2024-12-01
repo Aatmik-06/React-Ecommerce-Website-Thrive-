@@ -11,6 +11,10 @@ import Table from 'react-bootstrap/Table';
 import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 const ViewOrders=()=>{
+  const [myamt, setMyamt]=useState([]);
+ 
+
+
     const [mydata, setMydata]=useState([]);
     const navigate= useNavigate();
     const loadData=()=>{
@@ -19,10 +23,16 @@ const ViewOrders=()=>{
            console.log(res.data);
            setMydata(res.data);
        })
+       let apiamt="http://localhost:3000/ordersamt";
+       axios.get(apiamt).then((res1)=>{
+           console.log(res1.data);
+           setMyamt(res1.data);
+       })
     }
     useEffect(()=>{
        loadData();
     }, []);
+   
    
    const myRecDel=(id)=>{
        let api=`http://localhost:3000/orders/${id}`
@@ -34,8 +44,26 @@ const ViewOrders=()=>{
    const myEdit=(id)=>{
         navigate(`/editrec/${id}`)
    }
+ 
   
    const ans=mydata.map((key)=>{
+    const amt=myamt.map((key1)=>{
+      return(
+      <>
+      <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>{key1.Amount}</td>
+      <td></td>
+      </tr>
+      </>
+      )
+     })
+    
     return(
       <>
         <tr>
@@ -45,6 +73,7 @@ const ViewOrders=()=>{
           <td> {key.pincode} </td>
           <td> {key.number} </td>
           <td> {key.email} </td>
+          <td> {amt}</td>
           <td>
               <a href="#" onClick={()=>{myEdit(key.id)}}>
                 <FontAwesomeIcon icon={faPenToSquare} />
@@ -53,7 +82,6 @@ const ViewOrders=()=>{
                 <FontAwesomeIcon icon={faTrash} /> 
               </a>
           </td>
-  
         </tr>
         
       </>
@@ -87,11 +115,16 @@ const ViewOrders=()=>{
               <th>Pin Code</th>
               <th>Number</th>
               <th>Email</th>
+              <th>Total Amount $</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
-          {ans}
+          {ans}  
+         
+         
+          
+          
           </tbody>
         </Table>
           </Container>

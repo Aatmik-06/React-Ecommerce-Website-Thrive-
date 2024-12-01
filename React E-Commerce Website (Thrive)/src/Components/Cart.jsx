@@ -60,6 +60,7 @@ const Cart=()=>{
          totalAmount+=key.price*key.qnty;
          return(
              <>
+                
                 <tr>
                  <td> <img src={key.image} width="100" height="100" /> </td>
                  <td> {key.name} </td>

@@ -13,6 +13,7 @@ import Checkout from "./Components/Checkout";
 import ProductDetails from "./Components/ProductDetails";
 import PhonesShop from "./Components/PhonesShop";
 import PaymentDone from "./Components/PaymentDone";
+import ViewProduct from "./Components/ViewProduct";
 
 const App=()=>{
   return (
@@ -20,20 +21,21 @@ const App=()=>{
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Layout/>}>
-      <Route index element={<Home/>}/>
-      <Route path="/Home" element={<Home/>}/>
-      <Route path="/About" element={<About/>}/>
-      <Route path="/Shop" element={<Shop/>}/>
-      <Route path="/ContactUS" element={<ContactUs/>}/>
-      <Route path="/Cart" element={<Cart/>}/>
-      <Route path="/Faqs" element={<Faqs/>}/>
-      <Route path="/PhonesShop" element={<PhonesShop/>}/>
-      <Route path="/Virtual" element={<Virtual/>}/>
-      <Route path="/Wireless" element={<Wireless/>}/>
-      <Route path="/Computers" element={<Computers/>}/>
-      <Route  path="productdetail/:id" element={<ProductDetails/>}/>
-      <Route path="/Checkout/:amt" element={<Checkout/>}/>
-      <Route path="paydone" element={<PaymentDone/>}/>
+        <Route index element={<Home/>}/>
+        <Route path="/Home" element={<Home/>}/>
+        <Route path="/About" element={<About/>}/>
+        <Route path="/Shop" element={<Shop/>}/>
+        <Route path="/ContactUS" element={<ContactUs/>}/>
+        <Route path="/Cart" element={<Cart/>}/>
+        <Route path="/Faqs" element={<Faqs/>}/>
+        <Route path="/PhonesShop" element={<PhonesShop/>}/>
+        <Route path="/Virtual" element={<Virtual/>}/>
+        <Route path="/Wireless" element={<Wireless/>}/>
+        <Route path="/Computers" element={<Computers/>}/>
+        <Route path="productdetail/:id" element={<ProductDetails/>}/>
+        <Route path="/Checkout/:amt" element={<Checkout/>}/>
+        <Route path="/paydone" element={<PaymentDone/>}/>
+        <Route path="/ViewProduct" element={<ViewProduct/>} />
       </Route>
     </Routes>
     </BrowserRouter>

@@ -143,15 +143,23 @@
   font-size: 12px;
 }
 
-#b1 {
+#b1, #b2 {
   background-color: rgba(0, 0, 0, 0.852);
   transition: all 0.2s;
   width: 100%;
   padding: 10px 10px 10px 10px;
 }
 
-#b1:hover {
+#b1:hover, #b2:hover {
   background-color: rgb(245, 9, 99);
+}
+
+#b2 {
+  background-color: rgb(245, 9, 99);
+}
+
+#b2:hover {
+  background-color: rgba(0, 0, 0, 0.852);
 }
 
 #hero-img {
@@ -407,6 +415,10 @@
   background-color: rgba(230, 230, 230, 0.426);
 }
 
+#anim {
+  animation: blink 1s infinite;
+}
+
 #c1 h5 {
   padding: 10px;
 }
@@ -590,6 +602,17 @@
   justify-content: space-between;
 }
 
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 1024px) {
   #shop-items {
     grid-template-columns: 1fr 1fr;

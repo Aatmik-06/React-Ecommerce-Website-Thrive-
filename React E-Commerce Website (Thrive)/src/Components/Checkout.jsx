@@ -11,6 +11,7 @@ import Card from "./Card";
 import Cod from "./Cod";
 import NetBanking from "./NetBanking";
 import axios from "axios";
+import { useEffect } from "react";
 const Checkout = () => {
 
 
@@ -21,6 +22,17 @@ const Checkout = () => {
     setinput((values) => ({ ...values, [name]: value }));
     console.log(input);
   };
+  const [input1, setinput1] = useState({});
+  const handleInputorders1 = () => {
+    let amount = "Amount";
+    setinput1((values) => ({ ...values, [amount]: amt }));
+    console.log(input1);
+  };
+  useEffect(()=>{
+    handleInputorders1();
+  },[]);
+
+
   const { amt } = useParams();
   const [paymethod, setPayMethod] = useState("");
   const navigate = useNavigate();
@@ -28,6 +40,7 @@ const Checkout = () => {
     let val = e.target.value;
     setPayMethod(val);
   };
+ 
 
   let ans1;
   if (paymethod=="cash")
@@ -50,6 +63,10 @@ const Checkout = () => {
   }
 
   const paydone = () => {
+    let api1 = "http://localhost:3000/ordersamt";
+    axios.post(api1, input1).then((res1) => {
+      console.log(res1);
+    });
     
     let api = "http://localhost:3000/orders";
     axios.post(api, input).then((res) => {
@@ -111,7 +128,7 @@ const Checkout = () => {
                 <h1>Total</h1> <br />
                 <div id="cart-h5">
                   <h5>
-                    Includes all Tax (+$100) <br /> <hr />
+                    Platform Fees (+$100) <br /> <hr />
                     <h5>Free Delhivery</h5>
                     Total <br />
                     

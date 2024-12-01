@@ -41,14 +41,17 @@ const Home = () => {
 const ans=mydata.map((key)=>{
   return(
    <>
-    <div style={{width:"19rem", marginTop:"10px",border:"none",background:"rgb(247,247,247)"}} id="c1" >
+    <Link to="/ViewProduct" style={{textDecoration:"none",color:"rgb(33, 37, 41)"}}> <div style={{width:"19rem", marginTop:"10px",border:"none",background:"rgb(247,247,247)"}} id="c1" >
       <button id="sb-1">Sale</button>
       <img src={key.image} id="card-img" style={{width:"18rem"}} />
       <h5> {key.name} </h5>
         <span style={{fontWeight:'bold'}}>  ${key.price} </span> 
+        
         <button id="b1" style={{border:"none",color:"white"}}
        onClick={()=>{cartDataAdd(key.id, key.name, key.price, key.category, key.description, key.image)}} >  <FontAwesomeIcon icon={faCartShopping} />&nbsp;  Add to cart</button>
+        
     </div> 
+    </Link>
    </>
   )
 
@@ -97,7 +100,7 @@ const ans=mydata.map((key)=>{
                 marginLeft: "7px",
               }}
             >
-              New Arrivals
+          <span id="anim">New Arrivals</span>
             </h2>{" "}
       </div>
        
@@ -226,12 +229,13 @@ const ans=mydata.map((key)=>{
           <div style={{ display: "flex" }}>
             {" "}
             <h2 style={{ color: "rgb(245, 9, 99)" }}> |</h2>{" "}
-            <h2
+            <h2 
               style={{
                 color: "black",
                 fontWeight: 600,
                 marginTop: "2px",
                 marginLeft: "7px",
+                
               }}
             >
               Popular Products
@@ -246,7 +250,7 @@ const ans=mydata.map((key)=>{
           <div id="home-offers-foot">
             <p>Apple iPhone 13 Pro</p>
             <h1 >The wait is over : <br />iphone 13 pro max</h1> <br />
-            <p>Last call for up to <span style={{fontSize:"25px",fontWeight:"700"}}>32%</span> off!</p>
+            <p>Last call for up to <span style={{fontSize:"25px",fontWeight:"700"}} id="anim">32%</span> off!</p>
             <Link to="/Shop"><button>Shop Now</button></Link>
           </div>
          

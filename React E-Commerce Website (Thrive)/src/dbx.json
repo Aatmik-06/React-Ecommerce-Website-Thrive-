@@ -13,6 +13,16 @@
       "password": "Aatmik"
     }
   ],
+  "ordersamt": [
+    {
+      "id": "03c5",
+      "Amount": "612"
+    },
+    {
+      "id": "e4bd",
+      "Amount": "356"
+    }
+  ],
   "shop": [
     {
       "id": "1",
@@ -277,13 +287,22 @@
   ],
   "orders": [
     {
-      "id": "84b2",
-      "name": "Aadi",
+      "id": "0239",
+      "name": "Aatmik Kushwaha",
       "city": "Bhopal",
       "address": "Saket Nagar",
       "pincode": "462026",
       "number": "85795784672",
       "email": "asas@gmail.com"
+    },
+    {
+      "id": "438a",
+      "name": "Aadi",
+      "city": "Bhopal",
+      "address": "Saket Nagar",
+      "pincode": "462026",
+      "number": "85795784672",
+      "email": "xyz@gmail.com"
     }
   ]
 }
