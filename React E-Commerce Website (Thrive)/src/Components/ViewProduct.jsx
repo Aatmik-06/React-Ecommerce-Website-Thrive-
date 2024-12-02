@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useDispatch } from 'react-redux';
-// import { addToCart } from './cartSlice';
+import { addToCart } from './cartSlice';
 
 const ViewProduct=()=>{
     const {id} = useParams();
@@ -22,6 +22,10 @@ const ViewProduct=()=>{
         loadData();
     }, []);
 
+    const cartDataAdd=(id, name, price, categ, desc, myimg)=>{
+        dispatch(addToCart({id:id, name:name, price:price, category:categ, description:desc, image:myimg, qnty:1}))
+       }
+
   
     return(
         <>
@@ -33,6 +37,12 @@ const ViewProduct=()=>{
                 {mydata.price}
             </div>
         </div>
+        
+        <button
+             onClick={()=>{cartDataAdd(mydata.id, mydata.name, mydata.price, mydata.category, mydata.description, mydata.image)}}
+             >AddToCart     
+        </button>
+            
 
            
          
