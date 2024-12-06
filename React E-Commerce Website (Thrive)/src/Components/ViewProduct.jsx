@@ -14,10 +14,8 @@ const ViewProduct=()=>{
         axios.get(api).then((res)=>{
             setMydata(res.data);
             console.log(res.data);
-        })
-        
+        })   
     }
-    
     useEffect(()=>{
         loadData();
     }, []);
@@ -26,13 +24,13 @@ const ViewProduct=()=>{
         dispatch(addToCart({id:id, name:name, price:price, category:categ, description:desc, image:myimg, qnty:1}))
        }
 
-  
+
     return(
         <>
         <div>
             <div>
                 {id}
-                <img src={mydata.image} height={100} alt="" />
+                <img src={mydata.image} alt="" />
                 {mydata.name}
                 {mydata.price}
             </div>
@@ -42,10 +40,6 @@ const ViewProduct=()=>{
              onClick={()=>{cartDataAdd(mydata.id, mydata.name, mydata.price, mydata.category, mydata.description, mydata.image)}}
              >AddToCart     
         </button>
-            
-
-           
-         
         </>
     )
 }

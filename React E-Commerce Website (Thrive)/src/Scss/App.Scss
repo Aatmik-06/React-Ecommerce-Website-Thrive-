@@ -645,10 +645,15 @@ margin-top: 50px;
     font-weight: 600;
 }
 
-
+#admin-drop{
+    margin-left: -30px;
+}
 
 
 @media screen and (max-width: 1025px) {
+    #admin-drop{
+        margin-left: -50px;
+    }
     #shop-items{
      grid-template-columns: 1fr 1fr;
     }
@@ -668,6 +673,7 @@ margin-top: 50px;
         display: none;
     }
 }
+
 @media screen and (max-width: 994px) {
     #navitems{
         display: none;   
@@ -681,6 +687,7 @@ margin-top: 50px;
     #navbar{
         padding-bottom: 75px;
     }
+   
 }
 
 
@@ -765,6 +772,9 @@ margin-top: 50px;
         transition: all 0.2s ;
         // margin-left: 20px;
     }
+    #admin-drop{
+        margin-left: -80px;
+    }
 }
 @media screen and (max-width: 766px) {
     .container{
@@ -785,6 +795,7 @@ margin-top: 50px;
 }
 
 @media screen and (max-width: 525px) {
+    
     #navbar{
         // height: 70px;
         padding-bottom: 20px;
@@ -903,9 +914,7 @@ margin-top: 50px;
     }
     #footer-input{
         height: 2.5rem;
-        button{
-            margin-left: 20px;
-        }
+       
     }
     #footer-services{
         flex-wrap: wrap;
@@ -926,6 +935,12 @@ margin-top: 50px;
     #pay-p{
         font-size: 9px;
         color: white;
+    }
+    #footer-input {
+        padding: 6px 0px 0px 10px ;
+    }
+    #footer-input button {
+        margin-left: 40px;
     }
 }
 @media screen and (max-width: 469px) {

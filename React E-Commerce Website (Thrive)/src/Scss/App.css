@@ -630,7 +630,14 @@
   font-weight: 600;
 }
 
+#admin-drop {
+  margin-left: -30px;
+}
+
 @media screen and (max-width: 1025px) {
+  #admin-drop {
+    margin-left: -50px;
+  }
   #shop-items {
     grid-template-columns: 1fr 1fr;
   }
@@ -733,6 +740,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     transition: all 0.2s;
+  }
+  #admin-drop {
+    margin-left: -80px;
   }
 }
 @media screen and (max-width: 766px) {
@@ -861,9 +871,6 @@
   #footer-input {
     height: 2.5rem;
   }
-  #footer-input button {
-    margin-left: 20px;
-  }
   #footer-services {
     flex-wrap: wrap;
   }
@@ -882,6 +889,12 @@
   #pay-p {
     font-size: 9px;
     color: white;
+  }
+  #footer-input {
+    padding: 6px 0px 0px 10px;
+  }
+  #footer-input button {
+    margin-left: 40px;
   }
 }
 @media screen and (max-width: 469px) {

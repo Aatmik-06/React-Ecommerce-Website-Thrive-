@@ -133,7 +133,7 @@ const [showside, setShowside] = useState(false);
           </div>
           </Nav>
       <FontAwesomeIcon icon={faBarsStaggered} onClick={toggleShow} className='bars' />
-      <Offcanvas id="Side-Bar" show={showside} onHide={handleCloseside} scroll="true" backdrop="true" name="Enable both scrolling & backdrop">
+      <Offcanvas id="Side-Bar" show={showside} onHide={handleCloseside} scroll="true"  >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title> <Navbar.Brand as={Link} to="/Home" id='logo' >
             <img
@@ -190,11 +190,11 @@ const [showside, setShowside] = useState(false);
           
           
         <Nav.Link eventKey={2} as={Link} >
-        <Dropdown variant="dark">
-      <Dropdown.Toggle style={{backgroundColor:"transparent",border:"none",color:"transparent",width:"50px"}}  >
+        <Dropdown variant="dark" >
+      <Dropdown.Toggle  style={{backgroundColor:"transparent",border:"none",color:"transparent",width:"50px"}}  >
          <UserOutlined   id='user-icon' />
       </Dropdown.Toggle>
-      <Dropdown.Menu variant="dark">
+      <Dropdown.Menu variant="dark" id="admin-drop">
         <Dropdown.Item variant="dark"> <Button variant="dark"  onClick={handleShow} style={{width:"100%",border:"none",backgroundColor:"transparent"}}>
         Admin Login
       </Button></Dropdown.Item >
@@ -206,7 +206,7 @@ const [showside, setShowside] = useState(false);
     </Dropdown>
 
 
-    <Modal show={show} onHide={handleClose}>
+    <Modal show={show} onHide={handleClose} variant="dark" centered  >
         <Modal.Header closeButton>
           <Modal.Title>Admin Login</Modal.Title>
         </Modal.Header>
@@ -238,14 +238,11 @@ const [showside, setShowside] = useState(false);
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-      
-      
          <Button style={{backgroundColor:"rgb(245, 9, 99)",border:"none"}} onClick={handleSubmit}>
             Save Changes
           </Button>
         </Modal.Footer>
-      </Modal>
-                   
+      </Modal>       
             </Nav.Link>
             <Nav.Link eventKey={2} as={Link} to="cart" >
               <div style={{display:"flex"}}>
