@@ -288,7 +288,7 @@ const [showside, setShowside] = useState(false);
           </div>
         </footer>
         <div id='pay'>
-          <div> <p id='pay-p'> © 2020-2024. All rights reserved.</p></div>
+          <div> <p id='pay-p'> &copy; 2020-2024. All rights reserved.</p></div>
           <div>
             <img id='payment-images' src="src/assets/Images/visa.png" alt="" />
             <img id='payment-images' src="src/assets/Images/paypal.png" alt="" />

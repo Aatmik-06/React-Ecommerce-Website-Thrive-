@@ -40,18 +40,19 @@ const Home = () => {
 
 const ans=mydata.map((key)=>{
   return(
-   <>
-    <Link to="/ViewProduct" style={{textDecoration:"none",color:"rgb(33, 37, 41)"}}> <div style={{width:"19rem", marginTop:"10px",border:"none",background:"rgb(247,247,247)"}} id="c1" >
+    <>
+    <div style={{width:"19rem", marginTop:"10px",border:"none",background:"rgb(247,247,247)"}} id="c1" >
+      <Link to="/ViewProduct" style={{textDecoration:"none",color:"rgb(33, 37, 41)"}}>
       <button id="sb-1">Sale</button>
       <img src={key.image} id="card-img" style={{width:"18rem"}} />
       <h5> {key.name} </h5>
         <span style={{fontWeight:'bold'}}>  ${key.price} </span> 
-        
+        </Link>
         <button id="b1" style={{border:"none",color:"white"}}
        onClick={()=>{cartDataAdd(key.id, key.name, key.price, key.category, key.description, key.image)}} >  <FontAwesomeIcon icon={faCartShopping} />&nbsp;  Add to cart</button>
         
     </div> 
-    </Link>
+    
    </>
   )
 
