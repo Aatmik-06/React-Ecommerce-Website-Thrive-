@@ -206,7 +206,7 @@ const [showside, setShowside] = useState(false);
     </Dropdown>
 
 
-    <Modal show={show} onHide={handleClose} variant="dark" centered  >
+    <Modal show={show} onHide={handleClose} style={{backgroundColor:" rgba(0, 0, 0, 0.6)"}} centered  >
         <Modal.Header closeButton>
           <Modal.Title>Admin Login</Modal.Title>
         </Modal.Header>
@@ -216,7 +216,7 @@ const [showside, setShowside] = useState(false);
               <Form.Label>Admin Id</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Enter Admin Id"
+                placeholder="Id"
                 value={adminid} onChange={(e)=>{setAdminid(e.target.value)}} 
                 autoFocus
               />
@@ -227,7 +227,7 @@ const [showside, setShowside] = useState(false);
             <Form.Label>Admin Password</Form.Label>
               <Form.Control
                 type="password"
-                placeholder="Enter Admin Password"
+                placeholder="Password"
                 value={password} onChange={(e)=>{setPassword(e.target.value)}} 
                 autoFocus
               />   
