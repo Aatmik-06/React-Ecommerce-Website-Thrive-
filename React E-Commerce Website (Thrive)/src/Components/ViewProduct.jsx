@@ -35,20 +35,21 @@ const ViewProduct=()=>{
             <p><FontAwesomeIcon icon={faHouse} id="icon"  /> &nbsp; Home&nbsp;&nbsp;<FontAwesomeIcon icon={faChevronRight} /> &nbsp; Product Info </p>
           </div>
          <div id="view-product">
-            <div >
+            <div style={{backgroundColor:"rgb(245, 245, 245)"}}>
                <img src={mydata.image}  />
             </div>
         <div id="view-desc">
             <h3> {mydata.name} </h3> <br />
             <div style={{display:"flex"}}> <div id="best-seller">Best Seller</div><FontAwesomeIcon icon={faBolt} id="lightning-icon" /> &nbsp;&nbsp;&nbsp;<p style={{fontWeight:"700"}}>Selling fast! 56 people have this in their carts.</p> </div> <br />
-            <h3>Price - ${mydata.price} </h3> <br />
+            <h3 style={{color:"rgb(221,29,21)",fontWeight:"400"}}>${mydata.price} <strike> ${mydata.Originalprice} </strike> </h3>  <br />
             <h4> {mydata.category} </h4> <br />
-            <h5> {mydata.description} </h5>  <br />
-            <h3> {mydata.type} Stock</h3> <br />
+            <h6> {mydata.description} </h6>  <br />
+            <h3>Stock : {mydata.type}</h3> <br />
             <button 
              onClick={()=>{cartDataAdd(mydata.id, mydata.name, mydata.price, mydata.category, mydata.description, mydata.image)}}
-             >AddToCart     
-        </button>
+             >Add To Cart     
+            </button> 
+            <button id="buy1">Buy Now</button>
         </div>
         </div>
         
