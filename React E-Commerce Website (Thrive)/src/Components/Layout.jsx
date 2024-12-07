@@ -281,7 +281,8 @@ const [showside, setShowside] = useState(false);
           <div id='footer-main'>
           <h2>Subscribe for <br />
           Latest Trends & Offers</h2>
-          <div id='footer-input'><input type="text"  placeholder='Enter Your Email'/> <button>Subscribe</button></div>
+          <div id='footer-input'><input type="text" placeholder='Enter Your Email'/> 
+          <button>Subscribe</button></div>
           </div>
         </footer>
         <div id='pay'>

@@ -194,9 +194,9 @@
 }
 
 #popular-items {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   transition: all 0.2s;
 }
 
@@ -419,6 +419,9 @@
   animation: blink 1s infinite;
 }
 
+#c1 {
+  overflow: hidden;
+}
 #c1 h5 {
   padding: 10px;
 }
@@ -613,6 +616,34 @@
     opacity: 1;
   }
 }
+#view-product {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+#view-product img {
+  height: 500px;
+}
+#view-product #best-seller {
+  border: 1px solid black;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 10px 5px 10px;
+  font-size: 13px;
+  border-radius: 3px;
+  margin-right: 30px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+#view-product #lightning-icon {
+  margin-top: 6px;
+  animation: blink 0.8s infinite;
+  color: rgb(245, 9, 99);
+}
+#view-product #view-desc {
+  margin-top: 70px;
+}
+
 #Side-Bar {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) no-repeat center center/cover;
   background-size: 300% 300%;
@@ -642,6 +673,7 @@
     grid-template-columns: 1fr 1fr;
   }
   #popular-items {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
   .bars {
@@ -655,8 +687,26 @@
   #navdrop-main {
     display: none;
   }
+  #footer-input {
+    padding: 10px 10px 10px 10px;
+  }
+  #footer-input input {
+    width: 350px;
+  }
 }
 @media screen and (max-width: 994px) {
+  #footer-input {
+    padding: 10px 10px 10px 10px;
+  }
+  #footer-input input {
+    width: 250px;
+  }
+  #shop-items {
+    grid-template-columns: 1fr 1fr;
+  }
+  #popular-items {
+    grid-template-columns: 1fr 1fr;
+  }
   #navitems {
     display: none;
   }
@@ -709,9 +759,6 @@
   }
   #footer-main {
     padding: 50px 20px 50px 20px;
-  }
-  #footer-input button {
-    margin-left: 20px;
   }
   #footer-services {
     flex-wrap: wrap;
@@ -892,9 +939,6 @@
   }
   #footer-input {
     padding: 6px 0px 0px 10px;
-  }
-  #footer-input button {
-    margin-left: 40px;
   }
 }
 @media screen and (max-width: 469px) {

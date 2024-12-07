@@ -35,7 +35,7 @@ const App=()=>{
         <Route path="productdetail/:id" element={<ProductDetails/>}/>
         <Route path="/Checkout/:amt" element={<Checkout/>}/>
         <Route path="/paydone" element={<PaymentDone/>}/>
-        <Route path="/ViewProduct" element={<ViewProduct/>} />
+        <Route path="/ViewProduct/:id" element={<ViewProduct/>} />
       </Route>
     </Routes>
     </BrowserRouter>

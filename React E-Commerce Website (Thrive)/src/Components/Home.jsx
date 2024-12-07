@@ -15,12 +15,14 @@ import watch from "../assets/Images/product-cat-3.webp";
 import virtual from "../assets/Images/product-cat-2.webp";
 import bluetooth from "../assets/Images/product-cat-7.webp";
 import hero from "../assets/Images/slider-1.webp"
+import { useNavigate } from "react-router-dom";
 
 
 const Home = () => {
 
-  const [mydata, setMydata]= useState([]);
+ const [mydata, setMydata]= useState([]);
  const dispatch= useDispatch();
+ const navigate = useNavigate();
 
  const loadData=()=>{
     let api="http://localhost:3000/shop/?type=new";
@@ -33,6 +35,11 @@ const Home = () => {
     loadData();
  }, []);
 
+ const gotoview=(id)=>{
+  navigate(`/viewProduct/${id}`);
+ }
+
+
  const cartDataAdd=(id, name, price, categ, desc, myimg)=>{
   dispatch(addToCart({id:id, name:name, price:price, category:categ, description:desc, image:myimg, qnty:1}))
  }
@@ -41,13 +48,13 @@ const Home = () => {
 const ans=mydata.map((key)=>{
   return(
     <>
-    <div style={{width:"19rem", marginTop:"10px",border:"none",background:"rgb(247,247,247)"}} id="c1" >
-      <Link to="/ViewProduct" style={{textDecoration:"none",color:"rgb(33, 37, 41)"}}>
+    <div style={{width:"19rem", marginTop:"10px",border:"none",background:"rgb(247,247,247)"}} id="c1">
+      <div style={{textDecoration:"none",color:"rgb(33, 37, 41)"}} onClick={()=>{gotoview(key.id)}}>
       <button id="sb-1">Sale</button>
       <img src={key.image} id="card-img" style={{width:"18rem"}} />
       <h5> {key.name} </h5>
         <span style={{fontWeight:'bold'}}>  ${key.price} </span> 
-        </Link>
+        </div>
         <button id="b1" style={{border:"none",color:"white"}}
        onClick={()=>{cartDataAdd(key.id, key.name, key.price, key.category, key.description, key.image)}} >  <FontAwesomeIcon icon={faCartShopping} />&nbsp;  Add to cart</button>
         

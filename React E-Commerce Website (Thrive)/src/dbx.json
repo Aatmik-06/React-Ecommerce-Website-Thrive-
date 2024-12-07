@@ -40,7 +40,7 @@
       "price": 887,
       "description": "Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
       "category": "IpadPhone Tablets",
-      "image": "src/assets/Images/ipad.png",
+      "image": "https://imgs.search.brave.com/XbsLM-dFzqEBfXpdmUN6sHBabZSBTZm0Y8ECFljQNnU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvNS9JUGFk/LVBORy1GaWxlLURv/d25sb2FkLUZyZWUu/cG5n",
       "type": "new",
       "page": "one"
     },
@@ -110,7 +110,7 @@
       "price": 188,
       "description": "Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
       "category": "Wirless Watches",
-      "image": "src/assets/Images/product-2.png",
+      "image": "https://hamart-shop.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FF3hPQMP%2Fproduct-2.jpg&w=1080&q=75",
       "type": "new",
       "page": "second"
     },
