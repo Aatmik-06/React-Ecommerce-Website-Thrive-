@@ -199,6 +199,9 @@
   gap: 20px;
   transition: all 0.2s;
 }
+#popular-items #card-img {
+  overflow: hidden;
+}
 
 #shop-items {
   display: grid;
@@ -669,6 +672,23 @@
 #view-product strike {
   font-size: 19px;
   color: rgb(69, 69, 69);
+}
+
+#timer {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid rgb(150, 150, 150);
+  padding: 8px 40px 0px 40px;
+  text-align: center;
+  margin-left: 80px;
+}
+#timer h5 {
+  color: rgb(245, 9, 99);
+}
+
+#view-description {
+  padding: 10px 20px 20px 20px;
+  border: 1px solid rgb(150, 150, 150);
 }
 
 #Side-Bar {

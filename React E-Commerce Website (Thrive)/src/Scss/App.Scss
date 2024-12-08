@@ -204,6 +204,9 @@ margin-right: 50px;
     flex-wrap: wrap;
     gap: 20px;
     transition: all 0.2s ;
+    #card-img{
+        overflow: hidden;
+    }
 }
 #shop-items{
     display: grid;
@@ -683,6 +686,20 @@ margin-top: 50px;
         font-size: 19px;
         color: rgb(69, 69, 69);
     }
+}
+#timer{
+    width: fit-content;
+    border: 1px solid rgb(150, 150, 150);
+    padding: 8px 40px 0px 40px ;
+    text-align: center;
+    h5{
+        color: rgb(245, 9, 99);
+    }
+    margin-left: 80px;
+}
+#view-description{
+    padding: 10px 20px 20px 20px;
+    border: 1px solid rgb(150, 150, 150);
 }
 
 
