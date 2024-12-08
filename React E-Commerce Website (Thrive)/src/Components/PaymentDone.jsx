@@ -6,6 +6,9 @@ import { Container } from "react-bootstrap";
 import Link from "antd/es/typography/Link";
 import Marquee from "react-fast-marquee";
 import Card from "react-bootstrap/Card";
+import phonebanner1 from "../assets/Images/o-banner.jpg";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons/faChevronRight";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
 const PaymentDone=()=>{
     const [isLoader, setIsLoader]=useState(true);
 
@@ -17,7 +20,15 @@ const PaymentDone=()=>{
     return(
         <>
 
-
+<div id="cart-head">
+        <h1> Order Placed </h1>
+        <div id="cart-header">
+          <p>
+            <FontAwesomeIcon icon={faHouse} id="icon" /> &nbsp; Home&nbsp;&nbsp;
+            <FontAwesomeIcon icon={faChevronRight} /> &nbsp; Order Placed{" "}
+          </p>
+        </div>
+      </div>
         {isLoader?(
              <div style={{width:"100px", margin:"auto", paddingTop:"80px"}}>
              <LoaderComp/>
@@ -28,6 +39,7 @@ const PaymentDone=()=>{
         )}
         
         <Container style={{marginTop:"100px"}}>
+       
          <div style={{ display: "flex" }}>
             {" "}
             <h2 style={{ color: "rgb(245, 9, 99)" }}> |</h2>{" "}

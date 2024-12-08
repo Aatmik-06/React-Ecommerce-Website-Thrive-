@@ -21,6 +21,11 @@ import credit from '../assets/Images/g-credit.png';
 import safety from '../assets/Images/g-safety.png';
 import tele from '../assets/Images/g-tele.png';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import visa from "../assets/Images/visa.png"
+import paypal from "../assets/Images/paypal.png"
+import mastercard from "../assets/Images/mastercard.png"
+import amex from "../assets/Images/american-express.png"
+import wu from "../assets/Images/western-union.png"
 import { faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faSquareFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faSquareYoutube } from '@fortawesome/free-brands-svg-icons';
@@ -115,14 +120,10 @@ const [showside, setShowside] = useState(false);
             <Nav.Link as={Link} to="/About" id='navitems'>About</Nav.Link>
             <Nav.Link as={Link} to="/Shop" id='navitems'>Shop</Nav.Link>
             <NavDropdown title="pages"  id='navdrop-main'>
-              <NavDropdown.Item as={Link} id='navdrop' >Action</NavDropdown.Item>
-              <NavDropdown.Item as={Link} id='navdrop' >Action</NavDropdown.Item>
-              <NavDropdown.Item as={Link} id='navdrop' >Action</NavDropdown.Item>
-              <NavDropdown.Item as={Link} id='navdrop' >Action</NavDropdown.Item>
-              <NavDropdown.Item as={Link} id='navdrop' >Action</NavDropdown.Item>
-              <NavDropdown.Item as={Link} id='navdrop' >Action</NavDropdown.Item>
-              <NavDropdown.Item as={Link} id='navdrop' >Action</NavDropdown.Item>
-              <NavDropdown.Item as={Link} id='navdrop' >Action</NavDropdown.Item>
+            <NavDropdown.Item as={Link} id='navdrop-sidebar' >Faqs</NavDropdown.Item>
+              <NavDropdown.Item as={Link} id='navdrop-sidebar' >Privacy & Policy</NavDropdown.Item>
+              <NavDropdown.Item as={Link} id='navdrop-sidebar' >Terms &Conditions</NavDropdown.Item>
+              <NavDropdown.Item as={Link} id='navdrop-sidebar' >My Cart</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link as={Link} to="/ContactUs" id='navitems' >Contact Us</Nav.Link>
           </Nav>
@@ -155,14 +156,10 @@ const [showside, setShowside] = useState(false);
             <Nav.Link as={Link} to="/About" id='navitems-sidebar'>About</Nav.Link> <hr style={{margin:"0"}} />
             <Nav.Link as={Link} to="/Shop" id='navitems-sidebar'>Shop</Nav.Link> <hr style={{margin:"0"}} />
             <NavDropdown title="pages"  id='navdrop-main-sidebar'>
-              <NavDropdown.Item as={Link} id='navdrop-sidebar' >Action</NavDropdown.Item>
-              <NavDropdown.Item as={Link} id='navdrop-sidebar' >Action</NavDropdown.Item>
-              <NavDropdown.Item as={Link} id='navdrop-sidebar' >Action</NavDropdown.Item>
-              <NavDropdown.Item as={Link} id='navdrop-sidebar' >Action</NavDropdown.Item>
-              <NavDropdown.Item as={Link} id='navdrop-sidebar' >Action</NavDropdown.Item>
-              <NavDropdown.Item as={Link} id='navdrop-sidebar' >Action</NavDropdown.Item>
-              <NavDropdown.Item as={Link} id='navdrop-sidebar' >Action</NavDropdown.Item>
-              <NavDropdown.Item as={Link} id='navdrop-sidebar' >Action</NavDropdown.Item>
+              <NavDropdown.Item as={Link} id='navdrop-sidebar' >Faqs</NavDropdown.Item>
+              <NavDropdown.Item as={Link} id='navdrop-sidebar' >Privacy & Policy</NavDropdown.Item>
+              <NavDropdown.Item as={Link} id='navdrop-sidebar' >Terms &Conditions</NavDropdown.Item>
+              <NavDropdown.Item as={Link} id='navdrop-sidebar' >My Cart</NavDropdown.Item>
             </NavDropdown> <hr style={{margin:"0"}} />
             <Nav.Link as={Link} to="/ContactUs" id='navitems-sidebar' >Contact Us</Nav.Link>
             </div>
@@ -288,11 +285,11 @@ const [showside, setShowside] = useState(false);
         <div id='pay'>
           <div> <p id='pay-p'> &copy; 2020-2024. All rights reserved.</p></div>
           <div>
-            <img id='payment-images' src="src/assets/Images/visa.png" alt="" />
-            <img id='payment-images' src="src/assets/Images/paypal.png" alt="" />
-            <img id='payment-images' src="src/assets/Images/mastercard.png" alt="" />
-            <img id='payment-images' src="src/assets/Images/american-express.png" alt="" />
-            <img id='payment-images' src="src/assets/Images/western-union.png" alt="" />
+            <img id='payment-images' src={visa} alt="" />
+            <img id='payment-images' src={paypal} alt="" />
+            <img id='payment-images' src={mastercard} alt="" />
+            <img id='payment-images' src={amex} alt="" />
+            <img id='payment-images' src={wu} alt="" />
             </div>
           </div>
         </>

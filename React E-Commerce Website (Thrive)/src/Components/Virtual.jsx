@@ -6,7 +6,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container } from "react-bootstrap";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons/faChevronRight";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import phonebanner1 from "../assets/Images/o-banner3.jpg";
 import shopbanner from "../assets/Images/shop-banner.jpg"
@@ -16,6 +16,10 @@ const Virtual =()=>{
   const [lowPrice, setLowPrice]=useState("");
   const [highPrice, setHighPrice]=useState("");
   const [showFilter, setShowFilter]=useState(true);
+  const navigate = useNavigate();
+  const gotoview=(id)=>{
+    navigate(`/viewProduct/${id}`);
+   }
     
     const loadData=()=>{
         let api="http://localhost:3000/shop/?category=virtual Palner";
@@ -48,7 +52,7 @@ const Virtual =()=>{
      <>
       <div style={{width:"19rem", marginTop:"10px",border:"none",background:"rgb(247,247,247)"}} id="c1" >
         <button id="sb-1">Sale</button>
-        <img src={key.image} id="card-img" style={{width:"18rem"}} />
+        <img src={key.image} id="card-img" style={{width:"18rem"}}onClick={()=>{gotoview(key.id)}} />
         <h5> {key.name} </h5>
           <span style={{fontWeight:'bold'}}>  ${key.price} </span> 
           <button id="b1" style={{border:"none",color:"white"}}
@@ -67,7 +71,7 @@ const Virtual =()=>{
      <>
       <div style={{width:"19rem", marginTop:"10px",border:"none",background:"rgb(247,247,247)"}} id="c1" >
         <button id="sb-1">Sale</button>
-        <img src={key.image} id="card-img" style={{width:"18rem"}} />
+        <img src={key.image} id="card-img" style={{width:"18rem"}}onClick={()=>{gotoview(key.id)}} />
         <h5> {key.name} </h5>
           <span style={{fontWeight:'bold'}}>  ${key.price} </span> 
           <button id="b1" style={{border:"none",color:"white"}}
