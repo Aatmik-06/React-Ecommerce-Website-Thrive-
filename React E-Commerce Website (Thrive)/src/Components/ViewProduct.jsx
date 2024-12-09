@@ -23,6 +23,12 @@ import truck from '../assets/Images/g-truck.png';
 import credit from '../assets/Images/g-credit.png';
 import safety from '../assets/Images/g-safety.png';
 import { useNavigate } from "react-router-dom";
+import visa from "../assets/Images/visa.png"
+import paypal from "../assets/Images/paypal.png"
+import mastercard from "../assets/Images/mastercard.png"
+import amex from "../assets/Images/american-express.png"
+import wu from "../assets/Images/western-union.png"
+import { faShieldHalved } from "@fortawesome/free-solid-svg-icons";
 const ViewProduct = () => {
   const { id } = useParams();
   const [mydata, setMydata] = useState({});
@@ -137,8 +143,12 @@ const ViewProduct = () => {
           </p>
         </div>
         <div id="view-product">
-          <div style={{ backgroundColor: "rgb(245, 245, 245)" }}>
+          <div id="view-img-div">
             <img src={mydata.image} id="view-img" />
+            <div id="view-cont2">
+          <div id="view-img2"  style={{width:"200px",textAlign:"center"}}>  <img src={safety} alt="" /> <p>Return within 30 days of purchase. Duties & taxes are non-refundable.</p></div>
+          <div id="view-img2" style={{width:"200px",textAlign:"center"}}> <img src={truck} alt="" /><p>Estimate delivery time: 12-26 days(International),3-6 days (India).</p></div>
+        </div>
           </div>
           <div id="view-desc">
             <h3 style={{ marginBottom: "25px" }}> {mydata.name} </h3>
@@ -188,16 +198,23 @@ const ViewProduct = () => {
               Add To Cart
             </button>
             <button id="buy1" onClick={gotobuy}>Buy Now</button>
+            <div id='pay-view'>
+          <div style={{display:"flex",justifyContent:"space-evenly"}}>
+            <p> <FontAwesomeIcon icon={faShieldHalved}/> &nbsp;Guarantee Safe <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Checkout </p>
+            <p>
+            <img id='payment-images' src={visa} alt="" />
+            <img id='payment-images' src={paypal} alt="" />
+            <img id='payment-images' src={mastercard} alt="" />
+            <img id='payment-images' src={amex} alt="" />
+            <img id='payment-images' src={wu} alt="" />
+            </p>
+            </div>
+          </div>
           </div>
         </div>
        
-        <div id="view-cont2">
-          <div  style={{width:"200px",textAlign:"center"}}>  <img src={safety} alt="" /> <p>Return within 30 days of purchase. Duties & taxes are non-refundable.</p></div>
-          <div style={{width:"200px",textAlign:"center"}}> <img src={truck} alt="" /><p>Estimate delivery time: <br />12-26 days(International),<br />3-6 days (India).</p></div>
-          
-
-            
-        </div>
+       
         <div id="view-description">
           <div id="input-div">
           <h4  > Description</h4> 

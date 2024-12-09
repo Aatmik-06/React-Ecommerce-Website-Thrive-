@@ -20,6 +20,7 @@ const cartSlice= createSlice({
             }
         },
 
+        
         qntyInc:(state, actions)=>{
 
             for (var i=0; i<state.cart.length; i++)
@@ -52,6 +53,8 @@ const cartSlice= createSlice({
         itemRemove:(state, actions)=>{
             state.cart= state.cart.filter(key=>key.id!=actions.payload.id)
         },
+
+        
         
        
     }

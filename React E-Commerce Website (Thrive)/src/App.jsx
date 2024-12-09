@@ -14,6 +14,7 @@ import ProductDetails from "./Components/ProductDetails";
 import PhonesShop from "./Components/PhonesShop";
 import PaymentDone from "./Components/PaymentDone";
 import ViewProduct from "./Components/ViewProduct";
+import Search from "./Components/Search";
 
 const App=()=>{
   return (
@@ -35,6 +36,7 @@ const App=()=>{
         <Route path="productdetail/:id" element={<ProductDetails/>}/>
         <Route path="/Checkout/:amt" element={<Checkout/>}/>
         <Route path="/paydone" element={<PaymentDone/>}/>
+        <Route path="/Search" element={<Search/>}/>
         <Route path="/ViewProduct/:id" element={<ViewProduct/>} />
       </Route>
     </Routes>
