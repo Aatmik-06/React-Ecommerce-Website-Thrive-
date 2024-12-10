@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { qntyInc, qntyDec, itemRemove } from "./cartSlice";
 import { Container } from "react-bootstrap";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import Link from "antd/es/typography/Link";
+import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
@@ -18,7 +18,7 @@ import ipad from '../assets/Images/product-cat-1.png';
 import watch from "../assets/Images/product-cat-3.webp";
 import virtual from "../assets/Images/product-cat-2.webp";
 import bluetooth from "../assets/Images/product-cat-7.webp";
-import hero from "../assets/Images/slider-1.webp"
+
 const Cart=()=>{
     const MyCart= useSelector(state=>state.mycart.cart);
     const dispatch=useDispatch();
@@ -156,7 +156,7 @@ const Cart=()=>{
           </div>
         
            
-      <Marquee pauseOnHover speed={"100"}> 
+      <Marquee pauseOnHover speed={"100"} onClick={gotoshop}> 
             <div id="h2-cont" >
               <Link
                 to="/shop"

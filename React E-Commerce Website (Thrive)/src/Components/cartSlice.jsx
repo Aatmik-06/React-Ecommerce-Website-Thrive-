@@ -4,7 +4,8 @@ import {  message } from 'antd';
 const cartSlice= createSlice({
     name:"mycart",
     initialState:{
-        cart:[]
+        cart:[],
+        search:""
     },
     reducers:{
         addToCart:(state, actions)=>{
@@ -19,10 +20,7 @@ const cartSlice= createSlice({
                 message.success("Product Added");
             }
         },
-
-        
         qntyInc:(state, actions)=>{
-
             for (var i=0; i<state.cart.length; i++)
             {
                 if (state.cart[i].id==actions.payload.id)
@@ -31,7 +29,6 @@ const cartSlice= createSlice({
                 }
             }
         },
-
         qntyDec:(state, actions)=>{
             for (var i=0; i<state.cart.length; i++)
             {
@@ -47,17 +44,17 @@ const cartSlice= createSlice({
                     }
                 }
             }
-
         },
-        
         itemRemove:(state, actions)=>{
             state.cart= state.cart.filter(key=>key.id!=actions.payload.id)
         },
-
+        searchItem:(state,actions)=>{
+                state.search = actions.payload;
+        }
         
         
        
     }
 })
-export const {addToCart, qntyInc, qntyDec, itemRemove} = cartSlice.actions;
+export const {addToCart, qntyInc, qntyDec, itemRemove,searchItem} = cartSlice.actions;
 export default cartSlice.reducer;

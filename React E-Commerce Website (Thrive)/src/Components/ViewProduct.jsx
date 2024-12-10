@@ -11,7 +11,7 @@ import { faBolt } from "@fortawesome/free-solid-svg-icons";
 import { useRef } from "react";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import Marquee from "react-fast-marquee";
-import Link from "antd/es/typography/Link";
+import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import laptop from "../assets/Images/laptop.webp";
 import ipad from "../assets/Images/product-cat-1.png";
@@ -34,7 +34,10 @@ const ViewProduct = () => {
   const [mydata, setMydata] = useState({});
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+  
+  const gotoshop=()=>{
+    navigate("/Shop")
+  }
   const loadData = () => {
     let api = `http://localhost:3000/shop/${id}`;
     axios.get(api).then((res) => {
@@ -136,7 +139,7 @@ const ViewProduct = () => {
   return (
     <>
       <Container>
-        <div id="shop-header">
+        <div id="shop-header" onr>
           <p>
             <FontAwesomeIcon icon={faHouse} id="icon" /> &nbsp; Home&nbsp;&nbsp;
             <FontAwesomeIcon icon={faChevronRight} /> &nbsp; Product Info{" "}
@@ -302,7 +305,7 @@ const ViewProduct = () => {
             <span id="anim">People Also Bought</span>
           </h2>{" "}
         </div>
-        <Marquee pauseOnHover speed={"50"}>
+        <Marquee pauseOnHover speed={"50"} onClick={gotoshop}>
           <div id="h2-cont">
             <Link
               to="/Shop"

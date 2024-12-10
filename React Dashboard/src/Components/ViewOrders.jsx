@@ -12,9 +12,6 @@ import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 const ViewOrders=()=>{
   const [myamt, setMyamt]=useState([]);
- 
-
-
     const [mydata, setMydata]=useState([]);
     const navigate= useNavigate();
     const loadData=()=>{
@@ -47,33 +44,19 @@ const ViewOrders=()=>{
  
   
    const ans=mydata.map((key)=>{
-    const amt=myamt.map((key1)=>{
-      return(
-      <>
-      <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>{key1.Amount}</td>
-      <td></td>
-      </tr>
-      </>
-      )
-     })
+   
     
     return(
       <>
         <tr>
+          <td>{key.id}</td>
           <td> {key.name} </td>
           <td> {key.city} </td>
           <td> {key.address} </td>
           <td> {key.pincode} </td>
           <td> {key.number} </td>
           <td> {key.email} </td>
-          <td> {amt}</td>
+         
           <td>
               <a href="#" onClick={()=>{myEdit(key.id)}}>
                 <FontAwesomeIcon icon={faPenToSquare} />
@@ -109,13 +92,14 @@ const ViewOrders=()=>{
       <Table responsive="sm" id="table" striped bordered hover variant="dark" >
           <thead>
             <tr>
+              <th>Product Id</th>
               <th>Name</th>
               <th>City </th>
               <th>Address</th>
               <th>Pin Code</th>
               <th>Number</th>
               <th>Email</th>
-              <th>Total Amount $</th>
+              
               <th>Action</th>
             </tr>
           </thead>

@@ -17,18 +17,15 @@ const Shop=()=>{
     const [highPrice, setHighPrice]=useState("");
     const [showFilter, setShowFilter]=useState(true);
     const navigate = useNavigate();
-     
     const gotoview=(id)=>{
       navigate(`/viewProduct/${id}`);
      }
-
     const loadData=()=>{
         let api="http://localhost:3000/shop/?page=one";
         axios.get(api).then((res)=>{
             setMydata(res.data);
         })
      }
-
      const showData=()=>{
         let api="http://localhost:3000/shop/?page=one";
         axios.get(api).then((res)=>{
@@ -36,7 +33,6 @@ const Shop=()=>{
             setMydata(res.data);
         })
      }
-
      useEffect(()=>{
         loadData();
      }, []);
@@ -65,7 +61,6 @@ const Shop=()=>{
           )
           
         })
-
  const ans1=mydata.map((key)=>{
   if (key.price>=lowPrice && key.price<=highPrice)
     {
