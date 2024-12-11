@@ -132,10 +132,6 @@ const ViewProduct = () => {
   const gotobuy=()=>{
     navigate(`/Cart`);
   }
- 
-
-  
-
   return (
     <>
       <Container>
