@@ -18,7 +18,6 @@ import ipad from "../assets/Images/product-cat-1.png";
 import watch from "../assets/Images/product-cat-3.webp";
 import virtual from "../assets/Images/product-cat-2.webp";
 import bluetooth from "../assets/Images/product-cat-7.webp";
-import hero from "../assets/Images/slider-1.webp";
 import truck from '../assets/Images/g-truck.png';
 import credit from '../assets/Images/g-credit.png';
 import safety from '../assets/Images/g-safety.png';
@@ -455,3 +454,23 @@ const ViewProduct = () => {
   );
 };
 export default ViewProduct;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

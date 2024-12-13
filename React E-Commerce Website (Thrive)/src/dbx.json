@@ -33,6 +33,10 @@
     {
       "id": "ed42",
       "Amount": "987"
+    },
+    {
+      "id": "37d0",
+      "Amount": "1363"
     }
   ],
   "shop": [
@@ -125,17 +129,6 @@
       "page": "one"
     },
     {
-      "id": "10",
-      "name": "Samsung Watch 9 ",
-      "price": 188,
-      "Originalprice": 220,
-      "description": "Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
-      "category": "Wirless Watches",
-      "image": "https://hamart-shop.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FF3hPQMP%2Fproduct-2.jpg&w=1080&q=75",
-      "type": "new",
-      "page": "second"
-    },
-    {
       "id": "2",
       "name": "Guild Planner - 900w",
       "price": 228,
@@ -187,17 +180,6 @@
       "description": "Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
       "category": "Wireless  Watches",
       "image": "src/assets/Images/product-20.png",
-      "type": "old",
-      "page": "second"
-    },
-    {
-      "id": "16",
-      "name": "Apple Watch Pro Series 8 (2024 Edition)  ",
-      "price": 188,
-      "Originalprice": 220,
-      "description": "Shop Harry.com for ever Free shipping on orders $35+ or Pickup In-store and get",
-      "category": "Wireless  Watches",
-      "image": "src/assets/Images/product-2.png",
       "type": "old",
       "page": "second"
     },
@@ -362,6 +344,15 @@
       "pincode": "462026",
       "number": "85795784672",
       "email": "asas@gmail.com"
+    },
+    {
+      "id": "aafb",
+      "name": "Rashmi",
+      "city": "Bhaolp",
+      "address": "Bhopal",
+      "pincode": "462026",
+      "number": "85795784672",
+      "email": "adi180kush@gmail.com"
     }
   ]
 }

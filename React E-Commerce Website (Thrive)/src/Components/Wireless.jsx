@@ -20,7 +20,6 @@ const Wireless =()=>{
     const gotoview=(id)=>{
       navigate(`/viewProduct/${id}`);
      }
-    
     const loadData=()=>{
         let api="http://localhost:3000/shop/?category=Wireless  Watches";
         axios.get(api).then((res)=>{
