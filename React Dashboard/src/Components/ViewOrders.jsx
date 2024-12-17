@@ -56,7 +56,6 @@ const ViewOrders=()=>{
           <td> {key.pincode} </td>
           <td> {key.number} </td>
           <td> {key.email} </td>
-         
           <td>
               <a href="#" onClick={()=>{myEdit(key.id)}}>
                 <FontAwesomeIcon icon={faPenToSquare} />
@@ -66,12 +65,9 @@ const ViewOrders=()=>{
               </a>
           </td>
         </tr>
-        
       </>
     )
   })
-  
-  
       return(
           <>
            <Container id="products-content">
