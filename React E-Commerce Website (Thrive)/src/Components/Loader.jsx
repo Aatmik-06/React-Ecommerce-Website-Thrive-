@@ -12,6 +12,8 @@ const Loader = () => {
             wrapperClass=""
             visible={true}
         />
+
+        
     );
 };  
 export default Loader;
