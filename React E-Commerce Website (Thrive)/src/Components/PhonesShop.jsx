@@ -23,13 +23,13 @@ const PhonesShop=()=>{
      }
     
     const loadData=()=>{
-        let api="http://localhost:3000/shop/?category=IpadPhone Tablets";
+        let api="https://react-e-commerce-json.onrender.com/shop/?category=IpadPhone Tablets";
         axios.get(api).then((res)=>{
             setMydata(res.data);
         })
      }
      const showData=()=>{
-      let api="http://localhost:3000/shop/?category=IpadPhone Tablets";
+      let api="https://react-e-commerce-json.onrender.com/shop/?category=IpadPhone Tablets";
       axios.get(api).then((res)=>{
           setShowFilter(false);
           setMydata(res.data);

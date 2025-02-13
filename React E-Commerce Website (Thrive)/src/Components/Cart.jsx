@@ -35,7 +35,7 @@ const Cart=()=>{
       }else{
         navigate(`/Checkout/${tamount+100}`);
       }
-        let api = "http://localhost:3000/orders";
+        let api = "https://react-e-commerce-json.onrender.com/orders";
         axios.post(api, input).then((res) => {
           console.log(res);
           message.success("Product Successfully Added!!!");

@@ -38,7 +38,7 @@ const ViewProduct = () => {
     navigate("/Shop")
   }
   const loadData = () => {
-    let api = `http://localhost:3000/shop/${id}`;
+    let api = `https://react-e-commerce-json.onrender.com/shop/${id}`;
     axios.get(api).then((res) => {
       setMydata(res.data);
       console.log(res.data);

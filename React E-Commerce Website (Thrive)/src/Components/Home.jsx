@@ -25,7 +25,7 @@ const Home = () => {
  const navigate = useNavigate();
 
  const loadData=()=>{
-    let api="http://localhost:3000/shop/?type=new";
+    let api="https://react-e-commerce-json.onrender.com/shop/?type=new";
     axios.get(api).then((res)=>{
         setMydata(res.data);
     })
@@ -64,6 +64,7 @@ const ans=mydata.map((key)=>{
   )
 
 })
+
 
 
   return (

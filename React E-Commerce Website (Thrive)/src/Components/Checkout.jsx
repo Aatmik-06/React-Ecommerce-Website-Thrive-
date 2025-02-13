@@ -63,12 +63,12 @@ const Checkout = () => {
   }
 
   const paydone = () => {
-    let api1 = "http://localhost:3000/ordersamt";
+    let api1 = "https://react-e-commerce-json.onrender.com/ordersamt";
     axios.post(api1, input1).then((res1) => {
       console.log(res1);
     });
     
-    let api = "http://localhost:3000/orders";
+    let api = "https://react-e-commerce-json.onrender.com/orders";
     axios.post(api, input).then((res) => {
       console.log(res);
     });

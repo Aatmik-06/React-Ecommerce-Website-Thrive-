@@ -25,14 +25,14 @@ const Search=()=>{
      }
 
     const loadData=()=>{
-        let api="http://localhost:3000/shop/?page=one";
+        let api="https://react-e-commerce-json.onrender.com/shop/?page=one";
         axios.get(api).then((res)=>{
             setMyData(res.data);
         })
      }
 
      const showData=()=>{
-        let api="http://localhost:3000/shop/?page=one";
+        let api="https://react-e-commerce-json.onrender.com/shop/?page=one";
         axios.get(api).then((res)=>{
             setShowFilter(false);
             setMydata(res.data);
